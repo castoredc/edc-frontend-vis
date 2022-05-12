@@ -1,0 +1,21 @@
+.SettingsPanel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Filter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.Filter div[class^='InputBox'] {
+  /* Override needed because large width on TextInput is ignored */
+  width: 820px;
+}
+
+.Counts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

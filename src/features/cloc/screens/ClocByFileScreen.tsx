@@ -2,40 +2,65 @@ import { useState } from 'react';
 import {
   Banner,
   Button,
+  ChoiceOption,
   FormLabel,
   TextInput,
   ViewHeader,
 } from '@castoredc/matter';
 
 import edcClocByFileData from '../data/edc-cloc-by-file.json';
-import ClockByFileDataGrid from '../components/ClockByFileDataGrid';
+import ClocByFileRecord from '../types/ClocByFileRecord';
+import ClocByFileDataGrid from '../components/ClocByFileDataGrid';
+
+import classes from './ClocByFileScreen.module.css';
 
 const allRecords = Object.entries(edcClocByFileData)
-  .map(([key, value]) => ({
-    name: key !== 'SUM' ? key : 'TOTAL',
-    //@ts-ignore
+  .filter(([key]) => key !== 'header')
+  .map(([key, value]: [string, any]) => ({
+    path: key !== 'SUM' ? key : 'TOTAL',
     language: value.language,
-    //@ts-ignore
     blank: value.blank,
-    //@ts-ignore
     comment: value.comment,
-    //@ts-ignore
     code: value.code,
-  }))
-  .filter((r) => r.name !== 'header');
+  }));
 
 const LIMIT = 100;
 
 const ClocByFileScreen = () => {
   const [records, setRecords] = useState(allRecords.slice(0, LIMIT));
-  const [nameFilter, setFileNameFilter] = useState('');
+  const [pathFilter, setPathFilter] = useState('');
+  const [caseSensitiveFilter, setCaseSensitiveFilter] = useState(false);
+  const [regExpFilter, setRegExpFilter] = useState(false);
+  const [matchingCount, setMatchingCount] = useState<number | undefined>();
 
   const filterRecords = () => {
-    const matching = allRecords
-      .filter((r) => nameFilter === '' || r.name.includes(nameFilter))
-      .slice(0, LIMIT);
+    if (pathFilter !== '') {
+      let matching: ClocByFileRecord[] = [];
 
-    setRecords(matching);
+      if (regExpFilter) {
+        const regExp = new RegExp(
+          pathFilter,
+          caseSensitiveFilter ? undefined : 'i'
+        );
+
+        matching = allRecords.filter((r) => regExp.test(r.path));
+      } else {
+        const filterValue = caseSensitiveFilter
+          ? pathFilter
+          : pathFilter.toLocaleLowerCase();
+
+        const getPath = (record: ClocByFileRecord) =>
+          caseSensitiveFilter ? record.path : record.path.toLocaleLowerCase();
+
+        matching = allRecords.filter((r) => getPath(r).includes(filterValue));
+      }
+
+      setMatchingCount(matching.length);
+      setRecords(matching.slice(0, LIMIT));
+    } else {
+      setRecords(allRecords.slice(0, LIMIT));
+      setMatchingCount(undefined);
+    }
   };
 
   return (
@@ -56,29 +81,47 @@ const ClocByFileScreen = () => {
               <li>System: Ubuntu 20.04</li>
               <li>cloc: 1.82</li>
             </ul>
-            <br />
-            Note: currently only top 100 matching files are displayed. Total
-            count: {allRecords.length} (TODO: pagination)
           </>
         }
       />
-      <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-        <FormLabel id="nameFilter" hideLabel>
-          Name
-        </FormLabel>
-        <TextInput
-          id="nameFilter"
-          value={nameFilter}
-          onChange={(event) => setFileNameFilter(event.target.value)}
+      <div className={classes.SettingsPanel}>
+        <div
+          className={classes.Filter}
           onKeyDown={(event) => {
             if (event.key === 'Enter') {
               filterRecords();
             }
           }}
-        />
-        <Button onClick={filterRecords}>Filter</Button>
+        >
+          <FormLabel id="pathFilter" hideLabel>
+            Path
+          </FormLabel>
+          <TextInput
+            id="pathFilter"
+            value={pathFilter}
+            onChange={(event) => setPathFilter(event.target.value)}
+          />
+          <ChoiceOption
+            labelText="Case sensitive"
+            onChange={() => setCaseSensitiveFilter(!caseSensitiveFilter)}
+            checked={caseSensitiveFilter}
+          />
+          <ChoiceOption
+            labelText="RegExp"
+            onChange={() => setRegExpFilter(!regExpFilter)}
+            checked={regExpFilter}
+          />
+          <Button onClick={filterRecords}>Filter</Button>
+        </div>
+        <div className={classes.Counts}>
+          <span>
+            Matching: {matchingCount !== undefined ? matchingCount : 'N/A'}
+          </span>
+          <span>Showing: {records.length}</span>
+          <span>Total: {allRecords.length}</span>
+        </div>
       </div>
-      <ClockByFileDataGrid records={records} />
+      <ClocByFileDataGrid records={records} />
     </div>
   );
 };

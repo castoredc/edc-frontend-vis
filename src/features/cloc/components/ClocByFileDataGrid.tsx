@@ -12,8 +12,8 @@ const ClocByFileDataGrid: React.FC<Props> = (props) => {
 
   useEffect(() => {
     const rows = props.records.map((record) => ({
-      __rowId: 'r_' + record.name,
-      id: <DataGrid.HeaderCell>{record.name}</DataGrid.HeaderCell>,
+      __rowId: 'r_' + record.path,
+      id: <DataGrid.HeaderCell>{record.path}</DataGrid.HeaderCell>,
       language: <DataGrid.CellText>{record.language}</DataGrid.CellText>,
       blank: <DataGrid.CellText>{record.blank}</DataGrid.CellText>,
       comment: <DataGrid.CellText>{record.comment}</DataGrid.CellText>,
@@ -40,15 +40,16 @@ const ClocByFileDataGrid: React.FC<Props> = (props) => {
         anchorRightColumns={1}
         columns={[
           {
-            Header: 'Name',
+            Header: 'Path',
             accessor: 'id',
             isRowHeader: true,
-            width: 700,
+            maxWidth: 1200,
+            width: 800,
           },
           {
             Header: 'Language',
             accessor: 'language',
-            width: 150,
+            width: 200,
           },
           {
             Header: 'Blank',

@@ -1,5 +1,5 @@
 type ClocByFileRecord = {
-  name: string;
+  path: string;
   language: string;
   blank: number;
   comment: number;

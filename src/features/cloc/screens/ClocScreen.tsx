@@ -4,18 +4,14 @@ import edcClocData from '../data/edc-cloc.json';
 import ClocDataGrid from '../components/ClocDataGrid';
 
 const records = Object.entries(edcClocData)
-  .map(([key, value]) => ({
+  .filter(([key]) => key !== 'header')
+  .map(([key, value]: [string, any]) => ({
     language: key !== 'SUM' ? key : 'TOTAL',
-    //@ts-ignore
     files: value.nFiles,
-    //@ts-ignore
     blank: value.blank,
-    //@ts-ignore
     comment: value.comment,
-    //@ts-ignore
     code: value.code,
-  }))
-  .filter((r) => r.language !== 'header');
+  }));
 
 const ClocScreen = () => {
   return (
