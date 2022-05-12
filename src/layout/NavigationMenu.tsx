@@ -8,7 +8,12 @@ import {
   useNavigationState,
 } from '@castoredc/matter';
 
-import { CheckboxesIcon, FormIcon, QuillIcon } from '@castoredc/matter-icons';
+import {
+  CheckboxesIcon,
+  FormIcon,
+  ListIcon,
+  QuillIcon,
+} from '@castoredc/matter-icons';
 
 const MatterNavigation = () => {
   const navigate = useNavigate();
@@ -32,6 +37,9 @@ const MatterNavigation = () => {
       }}
     >
       <Navigation accessibleName="Main navigation">
+        <NavItem icon={<ListIcon />} {...getNavItemProps('cloc')}>
+          Count Lines of Code (cloc)
+        </NavItem>
         <NavItem icon={<QuillIcon />} {...getNavItemProps('lorem-ipsum')}>
           Lorem Ipsum
         </NavItem>

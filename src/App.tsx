@@ -2,12 +2,13 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { AppProvider, FontProvider } from '@castoredc/matter';
 import { edcTheme } from '@castoredc/matter-utils';
 
-import NavigationMenu from './components/NavigationMenu';
-import NavigationBar from './components/NavigationBar';
+import NavigationMenu from './layout/NavigationMenu';
+import NavigationBar from './layout/NavigationBar';
 
-import LoremIpsumScreen from './screens/LoremIpsumScreen';
-import FormikScreen from './screens/FormikScreen';
-import MiscScreen from './screens/MiscScreen';
+import ClocScreen from './features/cloc/screens/ClocScreen';
+import LoremIpsumScreen from './features/sample/screens/LoremIpsumScreen';
+import FormikScreen from './features/sample/screens/FormikScreen';
+import MiscScreen from './features/sample/screens/MiscScreen';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <NavigationMenu />
           <main style={{ padding: '10px 20px' }}>
             <Routes>
+              <Route path="cloc" element={<ClocScreen />} />
               <Route path="lorem-ipsum" element={<LoremIpsumScreen />} />
               <Route path="formik" element={<FormikScreen />} />
               <Route path="misc" element={<MiscScreen />} />

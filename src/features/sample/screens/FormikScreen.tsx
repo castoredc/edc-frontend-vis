@@ -2,7 +2,7 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { Button, Card, InputGroup, Stack, ViewHeader } from '@castoredc/matter';
 
-import { getFormFieldProps } from '../utils/formUtils';
+import { getFormFieldProps } from '../../../utils/formUtils';
 import User from '../types/User';
 
 // NOTE: Typing example on Yup docs that uses ObjectSchema is flawed (https://github.com/jquense/yup/issues/1595)
