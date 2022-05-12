@@ -37,9 +37,18 @@ const MatterNavigation = () => {
       }}
     >
       <Navigation accessibleName="Main navigation">
-        <NavItem icon={<ListIcon />} {...getNavItemProps('cloc')}>
-          Count Lines of Code (cloc)
-        </NavItem>
+        <NavItemGroup
+          icon={<ListIcon />}
+          id="cloc"
+          label="Count of Lines"
+          separator
+          {...getNavItemGroupProps('cloc')}
+        >
+          <NavItem {...getNavItemProps('cloc')}>Results of cloc</NavItem>
+          <NavItem {...getNavItemProps('cloc-by-file')}>
+            Results of cloc by file
+          </NavItem>
+        </NavItemGroup>
         <NavItem icon={<ListIcon />} {...getNavItemProps('graph')}>
           Graph
         </NavItem>
@@ -51,7 +60,7 @@ const MatterNavigation = () => {
           id="forms"
           label="Forms"
           separator
-          {...getNavItemGroupProps('issues')}
+          {...getNavItemGroupProps('forms')}
         >
           <NavItem {...getNavItemProps('formik')}>Formik</NavItem>
         </NavItemGroup>

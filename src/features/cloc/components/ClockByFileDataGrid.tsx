@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react';
 import { DataGrid } from '@castoredc/matter';
 
-import ClocRecord from '../types/ClocRecord';
+import ClocByFileRecord from '../types/ClocByFileRecord';
 
 type Props = {
-  records: ClocRecord[];
+  records: ClocByFileRecord[];
 };
 
-const ClocDataGrid: React.FC<Props> = (props) => {
+const ClocByFileDataGrid: React.FC<Props> = (props) => {
   const [rows, setRows] = React.useState<any>([]);
 
   useEffect(() => {
     const rows = props.records.map((record) => ({
-      __rowId: 'r_' + record.language,
-      id: <DataGrid.HeaderCell>{record.language}</DataGrid.HeaderCell>,
-      files: <DataGrid.CellText>{record.files}</DataGrid.CellText>,
+      __rowId: 'r_' + record.name,
+      id: <DataGrid.HeaderCell>{record.name}</DataGrid.HeaderCell>,
+      language: <DataGrid.CellText>{record.language}</DataGrid.CellText>,
       blank: <DataGrid.CellText>{record.blank}</DataGrid.CellText>,
       comment: <DataGrid.CellText>{record.comment}</DataGrid.CellText>,
       code: <DataGrid.CellText>{record.code}</DataGrid.CellText>,
@@ -40,14 +40,14 @@ const ClocDataGrid: React.FC<Props> = (props) => {
         anchorRightColumns={1}
         columns={[
           {
-            Header: 'Language',
+            Header: 'Name',
             accessor: 'id',
             isRowHeader: true,
-            width: 200,
+            width: 700,
           },
           {
-            Header: 'Files',
-            accessor: 'files',
+            Header: 'Language',
+            accessor: 'language',
             width: 150,
           },
           {
@@ -76,4 +76,4 @@ const ClocDataGrid: React.FC<Props> = (props) => {
   );
 };
 
-export default ClocDataGrid;
+export default ClocByFileDataGrid;
