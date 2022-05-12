@@ -10,8 +10,10 @@ import {
 
 import {
   CheckboxesIcon,
+  FileListIcon,
   FormIcon,
   ListIcon,
+  NodeIcon,
   QuillIcon,
 } from '@castoredc/matter-icons';
 
@@ -38,7 +40,7 @@ const MatterNavigation = () => {
     >
       <Navigation accessibleName="Main navigation">
         <NavItemGroup
-          icon={<ListIcon />}
+          icon={<FileListIcon />}
           id="cloc"
           label="Count of Lines"
           separator
@@ -49,7 +51,7 @@ const MatterNavigation = () => {
             Results of cloc by file
           </NavItem>
         </NavItemGroup>
-        <NavItem icon={<ListIcon />} {...getNavItemProps('graph')}>
+        <NavItem icon={<NodeIcon />} {...getNavItemProps('graph')}>
           Graph
         </NavItem>
         <NavItem icon={<QuillIcon />} {...getNavItemProps('lorem-ipsum')}>
