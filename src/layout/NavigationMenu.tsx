@@ -40,6 +40,9 @@ const MatterNavigation = () => {
         <NavItem icon={<ListIcon />} {...getNavItemProps('cloc')}>
           Count Lines of Code (cloc)
         </NavItem>
+        <NavItem icon={<ListIcon />} {...getNavItemProps('graph')}>
+          Graph
+        </NavItem>
         <NavItem icon={<QuillIcon />} {...getNavItemProps('lorem-ipsum')}>
           Lorem Ipsum
         </NavItem>
