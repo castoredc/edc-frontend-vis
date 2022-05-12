@@ -1,9 +1,16 @@
-import { Banner, ViewHeader } from '@castoredc/matter';
+import { useState } from 'react';
+import {
+  Banner,
+  Button,
+  FormLabel,
+  TextInput,
+  ViewHeader,
+} from '@castoredc/matter';
 
 import edcClocByFileData from '../data/edc-cloc-by-file.json';
 import ClockByFileDataGrid from '../components/ClockByFileDataGrid';
 
-const records = Object.entries(edcClocByFileData)
+const allRecords = Object.entries(edcClocByFileData)
   .map(([key, value]) => ({
     name: key !== 'SUM' ? key : 'TOTAL',
     //@ts-ignore
@@ -17,7 +24,20 @@ const records = Object.entries(edcClocByFileData)
   }))
   .filter((r) => r.name !== 'header');
 
+const LIMIT = 100;
+
 const ClocByFileScreen = () => {
+  const [records, setRecords] = useState(allRecords.slice(0, LIMIT));
+  const [nameFilter, setFileNameFilter] = useState('');
+
+  const filterRecords = () => {
+    const matching = allRecords
+      .filter((r) => nameFilter === '' || r.name.includes(nameFilter))
+      .slice(0, LIMIT);
+
+    setRecords(matching);
+  };
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <ViewHeader>
@@ -37,13 +57,28 @@ const ClocByFileScreen = () => {
               <li>cloc: 1.82</li>
             </ul>
             <br />
-            Note: currently only top 100 files are displayed out of{' '}
-            {records.length} (TODO: pagination)
+            Note: currently only top 100 matching files are displayed. Total
+            count: {allRecords.length} (TODO: pagination)
           </>
         }
       />
-      {/* TODO: Allow all records when pagination is done */}
-      <ClockByFileDataGrid records={records.slice(0, 100)} />
+      <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+        <FormLabel id="nameFilter" hideLabel>
+          Name
+        </FormLabel>
+        <TextInput
+          id="nameFilter"
+          value={nameFilter}
+          onChange={(event) => setFileNameFilter(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter') {
+              filterRecords();
+            }
+          }}
+        />
+        <Button onClick={filterRecords}>Filter</Button>
+      </div>
+      <ClockByFileDataGrid records={records} />
     </div>
   );
 };

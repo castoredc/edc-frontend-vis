@@ -76,4 +76,4 @@ const ClocByFileDataGrid: React.FC<Props> = (props) => {
   );
 };
 
-export default ClocByFileDataGrid;
+export default React.memo(ClocByFileDataGrid);
