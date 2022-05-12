@@ -7,13 +7,13 @@ type Props = {
   records: ClocRecord[];
 };
 
-const ClocDataGrid: React.FC<Props> = props => {
+const ClocDataGrid: React.FC<Props> = (props) => {
   const [rows, setRows] = React.useState<any>([]);
 
   useEffect(() => {
     console.log('Records:', props.records);
 
-    const rows = props.records.map(record => ({
+    const rows = props.records.map((record) => ({
       __rowId: 'r_' + record.language,
       id: <DataGrid.HeaderCell>{record.language}</DataGrid.HeaderCell>,
       files: <DataGrid.CellText>{record.files}</DataGrid.CellText>,
@@ -69,8 +69,8 @@ const ClocDataGrid: React.FC<Props> = props => {
           },
           DataGrid.ActionsCell.column,
         ]}
-        onClick={rowId => console.log(rowId)}
-        onColumnResizeEnd={columnWidth => console.log(columnWidth)}
+        onClick={(rowId) => console.log(rowId)}
+        onColumnResizeEnd={(columnWidth) => console.log(columnWidth)}
         onRowSelection={(rowId, selected) => console.log({ rowId, selected })}
         rows={rows}
       />

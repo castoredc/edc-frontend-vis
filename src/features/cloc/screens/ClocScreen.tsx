@@ -15,7 +15,7 @@ const records = Object.entries(edcClocData)
     //@ts-ignore
     code: value.code,
   }))
-  .filter(r => r.language !== 'header');
+  .filter((r) => r.language !== 'header');
 
 const ClocScreen = () => {
   return (
