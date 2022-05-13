@@ -37,6 +37,17 @@
   width: 700px;
 }
 
+.Stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.StatsName {
+  font-weight: bold;
+  width: 50px;
+}
+
 .Counts {
   display: flex;
   align-items: center;

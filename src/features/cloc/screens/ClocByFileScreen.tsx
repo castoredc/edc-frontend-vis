@@ -20,10 +20,10 @@ const LIMIT = 100;
 const COMMIT_ID = '6fb6e43fe96502e31fe04f1e182b475566b2d6d6';
 
 const allRecords = Object.entries(edcClocByFileData)
-  .filter(([key]) => key !== 'header')
+  .filter(([key]) => key !== 'header' && key !== 'SUM')
   .map(([key, value]: [string, any]) => ({
-    path: key !== 'SUM' ? key : '∑ TOTAL',
-    language: value.language || '∑ TOTAL',
+    path: key,
+    language: value.language,
     blank: value.blank,
     blankFormatted: value.blank.toLocaleString(),
     comment: value.comment,
@@ -39,6 +39,8 @@ const languageOptions = [...new Set(allRecords.map((r) => r.language))]
     value: l,
   }));
 
+const totalLoc = allRecords.reduce((a, c) => (a += c.code), 0);
+
 const ClocByFileScreen = () => {
   const [records, setRecords] = useState(allRecords.slice(0, LIMIT));
   const [pathFilter, setPathFilter] = useState('');
@@ -48,6 +50,7 @@ const ClocByFileScreen = () => {
   const [caseSensitiveFilter, setCaseSensitiveFilter] = useState(false);
   const [regExpFilter, setRegExpFilter] = useState(false);
   const [matchingCount, setMatchingCount] = useState<number | undefined>();
+  const [matchingLoc, setMatchingLoc] = useState<number | undefined>();
 
   const filterRecords = () => {
     if (pathFilter || languageFilter.length > 0) {
@@ -79,10 +82,12 @@ const ClocByFileScreen = () => {
       }
 
       setMatchingCount(matching.length);
+      setMatchingLoc(matching.reduce((a, c) => (a += c.code), 0));
       setRecords(matching.slice(0, LIMIT));
     } else {
       setRecords(allRecords.slice(0, LIMIT));
       setMatchingCount(undefined);
+      setMatchingLoc(undefined);
     }
   };
 
@@ -150,20 +155,44 @@ const ClocByFileScreen = () => {
           </div>
           <Button onClick={filterRecords}>Filter</Button>
         </div>
-        <div className={classes.Matching}>
-          <div className={classes.Counts}>
-            <span>
-              Matching:{' '}
-              {matchingCount !== undefined
-                ? matchingCount.toLocaleString()
-                : 'N/A'}
-            </span>
-            <span>Showing: {records.length.toLocaleString()}</span>
-            <span>Total: {allRecords.length.toLocaleString()}</span>
+        <div className={classes.Stats}>
+          <div>
+            <div className={classes.Counts}>
+              <span className={classes.StatsName}>FILES</span>
+              <span>
+                Matching:{' '}
+                {matchingCount !== undefined
+                  ? matchingCount.toLocaleString()
+                  : 'N/A'}
+              </span>
+              <span>Showing: {records.length.toLocaleString()}</span>
+              <span>Total: {allRecords.length.toLocaleString()}</span>
+            </div>
+            <ProgressBar
+              progress={
+                matchingCount !== undefined
+                  ? (matchingCount * 100) / allRecords.length
+                  : 0
+              }
+            />
           </div>
-          {matchingCount !== undefined ? (
-            <ProgressBar progress={(matchingCount * 100) / allRecords.length} />
-          ) : null}
+          <div>
+            <div className={classes.Counts}>
+              <span className={classes.StatsName}>LOC</span>
+              <span>
+                In matched:{' '}
+                {matchingLoc !== undefined
+                  ? matchingLoc.toLocaleString()
+                  : 'N/A'}
+              </span>
+              <span>Total: {totalLoc.toLocaleString()}</span>
+            </div>
+            <ProgressBar
+              progress={
+                matchingLoc !== undefined ? (matchingLoc * 100) / totalLoc : 0
+              }
+            />
+          </div>
         </div>
       </div>
       <ClocByFileDataGrid records={records} commitId={COMMIT_ID} />

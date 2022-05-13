@@ -6,6 +6,7 @@ import ClocDataGrid from '../components/ClocDataGrid';
 const records = Object.entries(edcClocData)
   .filter(([key]) => key !== 'header')
   .map(([key, value]: [string, any]) => ({
+    total: key === 'SUM',
     language: key !== 'SUM' ? key : '∑ TOTAL',
     files: value.nFiles,
     filesFormatted: value.nFiles.toLocaleString(),
