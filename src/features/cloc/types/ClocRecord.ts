@@ -9,6 +9,7 @@ type ClocRecord = {
   commentFormatted: string;
   code: number;
   codeFormatted: string;
+  percent: number;
 };
 
 export default ClocRecord;
