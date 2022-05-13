@@ -3,6 +3,7 @@ import {
   Banner,
   Button,
   ChoiceOption,
+  Dropdown,
   FormLabel,
   TextInput,
   ViewHeader,
@@ -14,11 +15,14 @@ import ClocByFileDataGrid from '../components/ClocByFileDataGrid';
 
 import classes from './ClocByFileScreen.module.css';
 
+const LIMIT = 100;
+const COMMIT_ID = '6fb6e43fe96502e31fe04f1e182b475566b2d6d6';
+
 const allRecords = Object.entries(edcClocByFileData)
   .filter(([key]) => key !== 'header')
   .map(([key, value]: [string, any]) => ({
-    path: key !== 'SUM' ? key : 'TOTAL',
-    language: value.language,
+    path: key !== 'SUM' ? key : '∑ TOTAL',
+    language: value.language || '∑ TOTAL',
     blank: value.blank,
     blankFormatted: value.blank.toLocaleString(),
     comment: value.comment,
@@ -27,36 +31,50 @@ const allRecords = Object.entries(edcClocByFileData)
     codeFormatted: value.code.toLocaleString(),
   }));
 
-const LIMIT = 100;
-const COMMIT_ID = '6fb6e43fe96502e31fe04f1e182b475566b2d6d6';
+const languageOptions = [...new Set(allRecords.map((r) => r.language))]
+  .sort()
+  .map((l) => ({
+    label: l,
+    value: l,
+  }));
 
 const ClocByFileScreen = () => {
   const [records, setRecords] = useState(allRecords.slice(0, LIMIT));
   const [pathFilter, setPathFilter] = useState('');
+  const [languageFilter, setLanguageFilter] = useState<
+    { label: string; value: string }[]
+  >([]);
   const [caseSensitiveFilter, setCaseSensitiveFilter] = useState(false);
   const [regExpFilter, setRegExpFilter] = useState(false);
   const [matchingCount, setMatchingCount] = useState<number | undefined>();
 
   const filterRecords = () => {
-    if (pathFilter !== '') {
-      let matching: ClocByFileRecord[] = [];
+    if (pathFilter || languageFilter.length > 0) {
+      let matching = [...allRecords];
 
-      if (regExpFilter) {
-        const regExp = new RegExp(
-          pathFilter,
-          caseSensitiveFilter ? undefined : 'i'
-        );
+      if (pathFilter) {
+        if (regExpFilter) {
+          const regExp = new RegExp(
+            pathFilter,
+            caseSensitiveFilter ? undefined : 'i'
+          );
 
-        matching = allRecords.filter((r) => regExp.test(r.path));
-      } else {
-        const filterValue = caseSensitiveFilter
-          ? pathFilter
-          : pathFilter.toLocaleLowerCase();
+          matching = matching.filter((r) => regExp.test(r.path));
+        } else {
+          const filterValue = caseSensitiveFilter
+            ? pathFilter
+            : pathFilter.toLocaleLowerCase();
 
-        const getPath = (record: ClocByFileRecord) =>
-          caseSensitiveFilter ? record.path : record.path.toLocaleLowerCase();
+          const getPath = (record: ClocByFileRecord) =>
+            caseSensitiveFilter ? record.path : record.path.toLocaleLowerCase();
 
-        matching = allRecords.filter((r) => getPath(r).includes(filterValue));
+          matching = matching.filter((r) => getPath(r).includes(filterValue));
+        }
+      }
+
+      if (languageFilter.length > 0) {
+        const languages = languageFilter.map((lf) => lf.value);
+        matching = matching.filter((r) => languages.includes(r.language));
       }
 
       setMatchingCount(matching.length);
@@ -68,7 +86,7 @@ const ClocByFileScreen = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+    <div className={classes.Top}>
       <ViewHeader>
         Count Lines of Code (cloc) by File on EDC Repository
       </ViewHeader>
@@ -97,24 +115,38 @@ const ClocByFileScreen = () => {
             }
           }}
         >
-          <FormLabel id="pathFilter" hideLabel>
-            Path
-          </FormLabel>
-          <TextInput
-            id="pathFilter"
-            value={pathFilter}
-            onChange={(event) => setPathFilter(event.target.value)}
-          />
-          <ChoiceOption
-            labelText="Case sensitive"
-            onChange={() => setCaseSensitiveFilter(!caseSensitiveFilter)}
-            checked={caseSensitiveFilter}
-          />
-          <ChoiceOption
-            labelText="RegExp"
-            onChange={() => setRegExpFilter(!regExpFilter)}
-            checked={regExpFilter}
-          />
+          <div className={classes.Options}>
+            <div className={classes.Path}>
+              <FormLabel id="pathFilter" hideLabel>
+                Path
+              </FormLabel>
+              <TextInput
+                id="pathFilter"
+                value={pathFilter}
+                onChange={(event) => setPathFilter(event.target.value)}
+              />
+              <ChoiceOption
+                labelText="Case sensitive"
+                onChange={() => setCaseSensitiveFilter(!caseSensitiveFilter)}
+                checked={caseSensitiveFilter}
+              />
+              <ChoiceOption
+                labelText="RegExp"
+                onChange={() => setRegExpFilter(!regExpFilter)}
+                checked={regExpFilter}
+              />
+            </div>
+            <div className={classes.Languages}>
+              <Dropdown
+                isMulti
+                menuWidth="700px"
+                options={languageOptions}
+                value={languageFilter}
+                // @ts-ignore
+                onChange={(value) => setLanguageFilter(value)}
+              />
+            </div>
+          </div>
           <Button onClick={filterRecords}>Filter</Button>
         </div>
         <div className={classes.Counts}>
