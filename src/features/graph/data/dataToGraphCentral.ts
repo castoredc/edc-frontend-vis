@@ -11,7 +11,7 @@ export const initialGraphData = (data: CJS): DataToGraphReturn => {
   }));
 
   const allNodes: NetNode[] = [
-    { id: 'PARENT', height: 1, size: 30, color: 'rgb(97, 205, 187)' },
+    { id: 'PARENT', height: 1, size: 30, color: 'rgb(232, 193, 160)' },
     ...mainNodes,
   ];
 
