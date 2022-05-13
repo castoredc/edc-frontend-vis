@@ -5,6 +5,7 @@ import {
   ChoiceOption,
   Dropdown,
   FormLabel,
+  ProgressBar,
   TextInput,
   ViewHeader,
 } from '@castoredc/matter';
@@ -149,15 +150,20 @@ const ClocByFileScreen = () => {
           </div>
           <Button onClick={filterRecords}>Filter</Button>
         </div>
-        <div className={classes.Counts}>
-          <span>
-            Matching:{' '}
-            {matchingCount !== undefined
-              ? matchingCount.toLocaleString()
-              : 'N/A'}
-          </span>
-          <span>Showing: {records.length.toLocaleString()}</span>
-          <span>Total: {allRecords.length.toLocaleString()}</span>
+        <div className={classes.Matching}>
+          <div className={classes.Counts}>
+            <span>
+              Matching:{' '}
+              {matchingCount !== undefined
+                ? matchingCount.toLocaleString()
+                : 'N/A'}
+            </span>
+            <span>Showing: {records.length.toLocaleString()}</span>
+            <span>Total: {allRecords.length.toLocaleString()}</span>
+          </div>
+          {matchingCount !== undefined ? (
+            <ProgressBar progress={(matchingCount * 100) / allRecords.length} />
+          ) : null}
         </div>
       </div>
       <ClocByFileDataGrid records={records} commitId={COMMIT_ID} />
