@@ -18,7 +18,8 @@ const ClocDataGrid: React.FC<Props> = (props) => {
       blank: <DataGrid.CellText>{record.blankFormatted}</DataGrid.CellText>,
       comment: <DataGrid.CellText>{record.commentFormatted}</DataGrid.CellText>,
       code: <DataGrid.CellText>{record.codeFormatted}</DataGrid.CellText>,
-      percent: <DataGrid.ProgressCell progress={record.percent} />,
+      filesPercent: <DataGrid.ProgressCell progress={record.filesPercent} />,
+      codePercent: <DataGrid.ProgressCell progress={record.codePercent} />,
     }));
 
     setRows(rows);
@@ -56,8 +57,13 @@ const ClocDataGrid: React.FC<Props> = (props) => {
             width: 150,
           },
           {
+            Header: 'Total Files %',
+            accessor: 'filesPercent',
+            width: 200,
+          },
+          {
             Header: 'Total Code %',
-            accessor: 'percent',
+            accessor: 'codePercent',
             width: 200,
           },
         ]}

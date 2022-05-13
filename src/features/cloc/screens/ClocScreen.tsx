@@ -4,7 +4,8 @@ import { Banner, ViewHeader } from '@castoredc/matter';
 import edcClocData from '../data/edc-cloc.json';
 import ClocDataGrid from '../components/ClocDataGrid';
 
-const totalLoc = edcClocData['SUM'].code;
+const filesTotal = edcClocData['SUM'].nFiles;
+const codeTotal = edcClocData['SUM'].code;
 
 const records = Object.entries(edcClocData)
   .filter(([key]) => key !== 'header')
@@ -19,7 +20,8 @@ const records = Object.entries(edcClocData)
     commentFormatted: value.comment.toLocaleString(),
     code: value.code,
     codeFormatted: value.code.toLocaleString(),
-    percent: (value.code * 100) / totalLoc,
+    filesPercent: (value.nFiles * 100) / filesTotal,
+    codePercent: (value.code * 100) / codeTotal,
   }));
 
 const ClocScreen = () => {

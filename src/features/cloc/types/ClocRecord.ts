@@ -9,7 +9,8 @@ type ClocRecord = {
   commentFormatted: string;
   code: number;
   codeFormatted: string;
-  percent: number;
+  filesPercent: number;
+  codePercent: number;
 };
 
 export default ClocRecord;
