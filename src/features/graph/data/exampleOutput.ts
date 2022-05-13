@@ -4,7 +4,8 @@ const exampleOutput: CJS = {
   config: [
     {
       path: 'server/sys/castor/_admin/js/ux/BillingCodeDialog.js',
-      name: 'BillingCodeDialog.js',
+      name: 'BillingCodeDialog',
+      fileName: 'BillingCodeDialog.js',
       size: '4.8 KB',
       childComponents: {
         importedExtComponents: [],
@@ -20,7 +21,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_admin/js/ux/BillingCodePanel.js',
-      name: 'BillingCodePanel.js',
+      name: 'BillingCodePanel',
+      fileName: 'BillingCodePanel.js',
       size: '7.1 KB',
       childComponents: {
         importedExtComponents: [
@@ -28,11 +30,6 @@ const exampleOutput: CJS = {
             name: 'BillingCodeStore',
             calledAs: 'new ux.BillingCodeStore',
             path: 'ux.BillingCodeStore',
-          },
-          {
-            name: 'BillingCodeDialog',
-            calledAs: 'new ux.BillingCodeDialog',
-            path: 'ux.BillingCodeDialog',
           },
           {
             name: 'BillingCodeDialog',
@@ -72,7 +69,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_admin/js/ux/ConfigAdminPanel.js',
-      name: 'ConfigAdminPanel.js',
+      name: 'ConfigAdminPanel',
+      fileName: 'ConfigAdminPanel.js',
       size: '7.1 KB',
       childComponents: {
         importedExtComponents: [
@@ -80,11 +78,6 @@ const exampleOutput: CJS = {
             name: 'AdminConfigStore',
             calledAs: 'new ux.AdminConfigStore',
             path: 'ux.AdminConfigStore',
-          },
-          {
-            name: 'NewAdminConfigDialog',
-            calledAs: 'new ux.NewAdminConfigDialog',
-            path: 'ux.NewAdminConfigDialog',
           },
           {
             name: 'NewAdminConfigDialog',
@@ -134,7 +127,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_admin/js/ux/CrfAccessAdminPanel.js',
-      name: 'CrfAccessAdminPanel.js',
+      name: 'CrfAccessAdminPanel',
+      fileName: 'CrfAccessAdminPanel.js',
       size: '5.9 KB',
       childComponents: {
         importedExtComponents: [
@@ -181,7 +175,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_admin/js/ux/CrfAdminPanel.js',
-      name: 'CrfAdminPanel.js',
+      name: 'CrfAdminPanel',
+      fileName: 'CrfAdminPanel.js',
       size: '10 KB',
       childComponents: {
         importedExtComponents: [
@@ -253,7 +248,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_admin/js/ux/EditProfileFormPanel.js',
-      name: 'EditProfileFormPanel.js',
+      name: 'EditProfileFormPanel',
+      fileName: 'EditProfileFormPanel.js',
       size: '7.9 KB',
       childComponents: {
         importedExtComponents: [],
@@ -289,7 +285,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_admin/js/ux/NewAdminConfigDialog.js',
-      name: 'NewAdminConfigDialog.js',
+      name: 'NewAdminConfigDialog',
+      fileName: 'NewAdminConfigDialog.js',
       size: '7.3 KB',
       childComponents: {
         importedExtComponents: [],
@@ -305,7 +302,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_admin/js/ux/UserAccessAdminPanel.js',
-      name: 'UserAccessAdminPanel.js',
+      name: 'UserAccessAdminPanel',
+      fileName: 'UserAccessAdminPanel.js',
       size: '5.5 KB',
       childComponents: {
         importedExtComponents: [
@@ -352,7 +350,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_admin/js/ux/UserAdminPanel.js',
-      name: 'UserAdminPanel.js',
+      name: 'UserAdminPanel',
+      fileName: 'UserAdminPanel.js',
       size: '16 KB',
       childComponents: {
         importedExtComponents: [
@@ -434,7 +433,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/Components/Button/Button.js',
-      name: 'Button.js',
+      name: 'Button',
+      fileName: 'Button.js',
       size: '908 bytes',
       childComponents: {
         importedExtComponents: [],
@@ -444,7 +444,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/Components/Container/ReactContainer.js',
-      name: 'ReactContainer.js',
+      name: 'ReactContainer',
+      fileName: 'ReactContainer.js',
       size: '809 bytes',
       childComponents: {
         importedExtComponents: [],
@@ -454,7 +455,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/Components/Dropdown/Dropdown.js',
-      name: 'Dropdown.js',
+      name: 'Dropdown',
+      fileName: 'Dropdown.js',
       size: '1.8 KB',
       childComponents: {
         importedExtComponents: [],
@@ -464,7 +466,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/Components/Modal/Modal.js',
-      name: 'Modal.js',
+      name: 'Modal',
+      fileName: 'Modal.js',
       size: '1.6 KB',
       childComponents: {
         importedExtComponents: [],
@@ -474,7 +477,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/Components/TextArea/TextArea.js',
-      name: 'TextArea.js',
+      name: 'TextArea',
+      fileName: 'TextArea.js',
       size: '1.5 KB',
       childComponents: {
         importedExtComponents: [],
@@ -484,7 +488,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/DataEntry/DataEntryBase.js',
-      name: 'DataEntryBase.js',
+      name: 'DataEntryBase',
+      fileName: 'DataEntryBase.js',
       size: '61 KB',
       childComponents: {
         importedExtComponents: [
@@ -526,21 +531,6 @@ const exampleOutput: CJS = {
             path: 'Castor.components.Button',
           },
           {
-            name: 'Button',
-            calledAs: 'new Castor.components.Button',
-            path: 'Castor.components.Button',
-          },
-          {
-            name: 'Button',
-            calledAs: 'new Castor.components.Button',
-            path: 'Castor.components.Button',
-          },
-          {
-            name: 'ReactContainer',
-            calledAs: 'new Castor.components.ReactContainer',
-            path: 'Castor.components.ReactContainer',
-          },
-          {
             name: 'ReactContainer',
             calledAs: 'new Castor.components.ReactContainer',
             path: 'Castor.components.ReactContainer',
@@ -559,22 +549,17 @@ const exampleOutput: CJS = {
             path: 'Ext.BoxComponent',
           },
           {
-            name: 'BoxComponent',
-            calledAs: 'new Ext.BoxComponent',
-            path: 'Ext.BoxComponent',
-          },
-          {
             name: 'TabPanel',
             calledAs: 'new Ext.TabPanel',
             path: 'Ext.TabPanel',
           },
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/DataEntry/DataEntryFormContainerBase.js',
-      name: 'DataEntryFormContainerBase.js',
+      name: 'DataEntryFormContainerBase',
+      fileName: 'DataEntryFormContainerBase.js',
       size: '7.2 KB',
       childComponents: {
         importedExtComponents: [],
@@ -584,7 +569,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/DataEntry/DataEntryFormContainerCastor.js',
-      name: 'DataEntryFormContainerCastor.js',
+      name: 'DataEntryFormContainerCastor',
+      fileName: 'DataEntryFormContainerCastor.js',
       size: '91 KB',
       childComponents: {
         importedExtComponents: [
@@ -621,11 +607,6 @@ const exampleOutput: CJS = {
             path: 'Castor.components.Button',
           },
           {
-            name: 'Button',
-            calledAs: 'new Castor.components.Button',
-            path: 'Castor.components.Button',
-          },
-          {
             name: 'Modal',
             calledAs: 'new Castor.components.Modal',
             path: 'Castor.components.Modal',
@@ -643,31 +624,10 @@ const exampleOutput: CJS = {
             path: 'Ext.Toolbar',
           },
           {
-            name: 'Toolbar',
-            calledAs: 'new Ext.Toolbar',
-            path: 'Ext.Toolbar',
-          },
-          {
-            name: 'Toolbar',
-            calledAs: 'new Ext.Toolbar',
-            path: 'Ext.Toolbar',
-          },
-          {
-            name: 'Toolbar',
-            calledAs: 'new Ext.Toolbar',
-            path: 'Ext.Toolbar',
-          },
-          {
             name: 'Container',
             calledAs: 'new Ext.Container',
             path: 'Ext.Container',
           },
-          {
-            name: 'BoxComponent',
-            calledAs: 'new Ext.BoxComponent',
-            path: 'Ext.BoxComponent',
-          },
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
           { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
           {
             name: 'DelayedTask(',
@@ -679,17 +639,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.form.DisplayField',
             path: 'Ext.form.DisplayField',
           },
-          {
-            name: 'Toolbar',
-            calledAs: 'new Ext.Toolbar',
-            path: 'Ext.Toolbar',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/DataEntry/DataEntryFormContainerSurvey.js',
-      name: 'DataEntryFormContainerSurvey.js',
+      name: 'DataEntryFormContainerSurvey',
+      fileName: 'DataEntryFormContainerSurvey.js',
       size: '58 KB',
       childComponents: {
         importedExtComponents: [
@@ -712,12 +668,6 @@ const exampleOutput: CJS = {
         importedReactComponents: [],
         defaultExtComponents: [
           { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          {
-            name: 'DisplayField',
-            calledAs: 'new Ext.form.DisplayField',
-            path: 'Ext.form.DisplayField',
-          },
           {
             name: 'DisplayField',
             calledAs: 'new Ext.form.DisplayField',
@@ -728,7 +678,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/DataEntry/DataEntryRandomizationPanel.js',
-      name: 'DataEntryRandomizationPanel.js',
+      name: 'DataEntryRandomizationPanel',
+      fileName: 'DataEntryRandomizationPanel.js',
       size: '8.8 KB',
       childComponents: {
         importedExtComponents: [],
@@ -752,9 +703,6 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.BoxComponent',
             path: 'Ext.BoxComponent',
           },
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
           {
             name: 'XTemplate',
             calledAs: 'new Ext.XTemplate',
@@ -765,7 +713,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/DataEntry/Randomization/DataEntryRandomizationFieldsGridPanel.js',
-      name: 'DataEntryRandomizationFieldsGridPanel.js',
+      name: 'DataEntryRandomizationFieldsGridPanel',
+      fileName: 'DataEntryRandomizationFieldsGridPanel.js',
       size: '3.9 KB',
       childComponents: {
         importedExtComponents: [],
@@ -788,7 +737,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/DataEntry/ReportInstancesView.js',
-      name: 'ReportInstancesView.js',
+      name: 'ReportInstancesView',
+      fileName: 'ReportInstancesView.js',
       size: '47 KB',
       childComponents: {
         importedExtComponents: [
@@ -866,11 +816,6 @@ const exampleOutput: CJS = {
             path: 'Ext.Window',
           },
           {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
             name: 'PagingToolbar',
             calledAs: 'new Ext.PagingToolbar',
             path: 'Ext.PagingToolbar',
@@ -885,7 +830,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/DataEntry/reports/ReportsPdfArchiveInstancesContainer.js',
-      name: 'ReportsPdfArchiveInstancesContainer.js',
+      name: 'ReportsPdfArchiveInstancesContainer',
+      fileName: 'ReportsPdfArchiveInstancesContainer.js',
       size: '1.0 KB',
       childComponents: {
         importedExtComponents: [
@@ -901,7 +847,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/DataEntry/surveys/SurveyInstanceEditForm.js',
-      name: 'SurveyInstanceEditForm.js',
+      name: 'SurveyInstanceEditForm',
+      fileName: 'SurveyInstanceEditForm.js',
       size: '21 KB',
       childComponents: {
         importedExtComponents: [
@@ -949,11 +896,6 @@ const exampleOutput: CJS = {
             path: 'Ext.Container',
           },
           {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
             name: 'FormPanel',
             calledAs: 'new Ext.form.FormPanel',
             path: 'Ext.form.FormPanel',
@@ -968,7 +910,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/DataEntry/surveys/SurveysCombo.js',
-      name: 'SurveysCombo.js',
+      name: 'SurveysCombo',
+      fileName: 'SurveysCombo.js',
       size: '1.7 KB',
       childComponents: {
         importedExtComponents: [],
@@ -994,7 +937,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/DataEntry/surveys/SurveysInstancesContainer.js',
-      name: 'SurveysInstancesContainer.js',
+      name: 'SurveysInstancesContainer',
+      fileName: 'SurveysInstancesContainer.js',
       size: '4.8 KB',
       childComponents: {
         importedExtComponents: [
@@ -1016,7 +960,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/Components/SettingsBanner/SettingsBanner.js',
-      name: 'SettingsBanner.js',
+      name: 'SettingsBanner',
+      fileName: 'SettingsBanner.js',
       size: '1.2 KB',
       childComponents: {
         importedExtComponents: [],
@@ -1026,7 +971,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/EditFieldPropertiesDialog.js',
-      name: 'EditFieldPropertiesDialog.js',
+      name: 'EditFieldPropertiesDialog',
+      fileName: 'EditFieldPropertiesDialog.js',
       size: '131 KB',
       childComponents: {
         importedExtComponents: [
@@ -1115,41 +1061,6 @@ const exampleOutput: CJS = {
             path: 'Ext.data.JsonReader',
           },
           {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ArrayStore',
-            calledAs: 'new Ext.data.ArrayStore',
-            path: 'Ext.data.ArrayStore',
-          },
-          {
-            name: 'ArrayStore',
-            calledAs: 'new Ext.data.ArrayStore',
-            path: 'Ext.data.ArrayStore',
-          },
-          {
             name: 'ArrayStore',
             calledAs: 'new Ext.data.ArrayStore',
             path: 'Ext.data.ArrayStore',
@@ -1160,59 +1071,9 @@ const exampleOutput: CJS = {
             path: 'Ext.BoxComponent',
           },
           {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'FieldSet',
-            calledAs: 'new Ext.form.FieldSet',
-            path: 'Ext.form.FieldSet',
-          },
-          {
             name: 'Button',
             calledAs: 'new Ext.Button',
             path: 'Ext.Button',
-          },
-          {
-            name: 'FieldSet',
-            calledAs: 'new Ext.form.FieldSet',
-            path: 'Ext.form.FieldSet',
-          },
-          {
-            name: 'Button',
-            calledAs: 'new Ext.Button',
-            path: 'Ext.Button',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
           },
           {
             name: 'ComboBox',
@@ -1220,41 +1081,22 @@ const exampleOutput: CJS = {
             path: 'Ext.form.ComboBox',
           },
           {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
             name: 'TextField',
             calledAs: 'new Ext.form.TextField',
             path: 'Ext.form.TextField',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
           },
           {
             name: 'CompositeField',
             calledAs: 'new Ext.form.CompositeField',
             path: 'Ext.form.CompositeField',
           },
-          {
-            name: 'TextField',
-            calledAs: 'new Ext.form.TextField',
-            path: 'Ext.form.TextField',
-          },
-          {
-            name: 'TextField',
-            calledAs: 'new Ext.form.TextField',
-            path: 'Ext.form.TextField',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/FormBuilderBaseEditor.js',
-      name: 'FormBuilderBaseEditor.js',
+      name: 'FormBuilderBaseEditor',
+      fileName: 'FormBuilderBaseEditor.js',
       size: '42 KB',
       childComponents: {
         importedExtComponents: [],
@@ -1282,11 +1124,6 @@ const exampleOutput: CJS = {
             path: 'Ext.BoxComponent',
           },
           {
-            name: 'DataView',
-            calledAs: 'new Ext.DataView',
-            path: 'Ext.DataView',
-          },
-          {
             name: 'Store',
             calledAs: 'new Ext.data.Store',
             path: 'Ext.data.Store',
@@ -1301,17 +1138,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.data.JsonReader',
             path: 'Ext.data.JsonReader',
           },
-          {
-            name: 'XTemplate',
-            calledAs: 'new Ext.XTemplate',
-            path: 'Ext.XTemplate',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/FormBuilderReportEditor.js',
-      name: 'FormBuilderReportEditor.js',
+      name: 'FormBuilderReportEditor',
+      fileName: 'FormBuilderReportEditor.js',
       size: '966 bytes',
       childComponents: {
         importedExtComponents: [],
@@ -1327,7 +1160,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/FormBuilderStudyEditor.js',
-      name: 'FormBuilderStudyEditor.js',
+      name: 'FormBuilderStudyEditor',
+      fileName: 'FormBuilderStudyEditor.js',
       size: '969 bytes',
       childComponents: {
         importedExtComponents: [],
@@ -1343,7 +1177,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/FormBuilderSurveyEditor.js',
-      name: 'FormBuilderSurveyEditor.js',
+      name: 'FormBuilderSurveyEditor',
+      fileName: 'FormBuilderSurveyEditor.js',
       size: '973 bytes',
       childComponents: {
         importedExtComponents: [],
@@ -1359,7 +1194,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/FormBuilderTabs.js',
-      name: 'FormBuilderTabs.js',
+      name: 'FormBuilderTabs',
+      fileName: 'FormBuilderTabs.js',
       size: '2.9 KB',
       childComponents: {
         importedExtComponents: [],
@@ -1369,7 +1205,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/FormStructureOptionGroupEditor.js',
-      name: 'FormStructureOptionGroupEditor.js',
+      name: 'FormStructureOptionGroupEditor',
+      fileName: 'FormStructureOptionGroupEditor.js',
       size: '9.6 KB',
       childComponents: {
         importedExtComponents: [
@@ -1427,7 +1264,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/FormStructureReportEditor.js',
-      name: 'FormStructureReportEditor.js',
+      name: 'FormStructureReportEditor',
+      fileName: 'FormStructureReportEditor.js',
       size: '33 KB',
       childComponents: {
         importedExtComponents: [
@@ -1442,24 +1280,9 @@ const exampleOutput: CJS = {
             path: 'ux.dialogs.AddNewReportDialog',
           },
           {
-            name: 'AddNewReportDialog',
-            calledAs: 'new ux.dialogs.AddNewReportDialog',
-            path: 'ux.dialogs.AddNewReportDialog',
-          },
-          {
             name: 'ReportStepDialog',
             calledAs: 'new ux.dialog.ReportStepDialog',
             path: 'ux.dialog.ReportStepDialog',
-          },
-          {
-            name: 'ReportStepDialog',
-            calledAs: 'new ux.dialog.ReportStepDialog',
-            path: 'ux.dialog.ReportStepDialog',
-          },
-          {
-            name: 'AssignRoleToFormEntityDialog',
-            calledAs: 'new ux.dialog.AssignRoleToFormEntityDialog',
-            path: 'ux.dialog.AssignRoleToFormEntityDialog',
           },
           {
             name: 'AssignRoleToFormEntityDialog',
@@ -1485,16 +1308,6 @@ const exampleOutput: CJS = {
             path: 'Ext.grid.ColumnModel',
           },
           {
-            name: 'Toolbar',
-            calledAs: 'new Ext.Toolbar',
-            path: 'Ext.Toolbar',
-          },
-          {
-            name: 'GridPanel',
-            calledAs: 'new Ext.grid.GridPanel',
-            path: 'Ext.grid.GridPanel',
-          },
-          {
             name: 'Store',
             calledAs: 'new Ext.data.Store',
             path: 'Ext.data.Store',
@@ -1510,16 +1323,6 @@ const exampleOutput: CJS = {
             path: 'Ext.data.JsonReader',
           },
           {
-            name: 'ColumnModel',
-            calledAs: 'new Ext.grid.ColumnModel',
-            path: 'Ext.grid.ColumnModel',
-          },
-          {
-            name: 'Menu',
-            calledAs: 'new Ext.menu.Menu',
-            path: 'Ext.menu.Menu',
-          },
-          {
             name: 'Menu',
             calledAs: 'new Ext.menu.Menu',
             path: 'Ext.menu.Menu',
@@ -1533,16 +1336,6 @@ const exampleOutput: CJS = {
             name: 'SimpleStore',
             calledAs: 'new Ext.data.SimpleStore',
             path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'TextField',
-            calledAs: 'new Ext.form.TextField',
-            path: 'Ext.form.TextField',
-          },
-          {
-            name: 'TextField',
-            calledAs: 'new Ext.form.TextField',
-            path: 'Ext.form.TextField',
           },
           {
             name: 'TextField',
@@ -1564,7 +1357,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/FormStructureStudyEditor.js',
-      name: 'FormStructureStudyEditor.js',
+      name: 'FormStructureStudyEditor',
+      fileName: 'FormStructureStudyEditor.js',
       size: '35 KB',
       childComponents: {
         importedExtComponents: [
@@ -1583,11 +1377,6 @@ const exampleOutput: CJS = {
             calledAs: 'new ux.dialog.StepDialog',
             path: 'ux.dialog.StepDialog',
           },
-          {
-            name: 'StepDialog',
-            calledAs: 'new ux.dialog.StepDialog',
-            path: 'ux.dialog.StepDialog',
-          },
         ],
         importedReactComponents: [],
         defaultExtComponents: [
@@ -1607,36 +1396,6 @@ const exampleOutput: CJS = {
             path: 'Ext.data.JsonReader',
           },
           {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'Toolbar',
-            calledAs: 'new Ext.Toolbar',
-            path: 'Ext.Toolbar',
-          },
-          {
-            name: 'GridPanel',
-            calledAs: 'new Ext.grid.GridPanel',
-            path: 'Ext.grid.GridPanel',
-          },
-          {
-            name: 'ColumnModel',
-            calledAs: 'new Ext.grid.ColumnModel',
-            path: 'Ext.grid.ColumnModel',
-          },
-          {
             name: 'Toolbar',
             calledAs: 'new Ext.Toolbar',
             path: 'Ext.Toolbar',
@@ -1657,59 +1416,9 @@ const exampleOutput: CJS = {
             path: 'Ext.menu.Menu',
           },
           {
-            name: 'Menu',
-            calledAs: 'new Ext.menu.Menu',
-            path: 'Ext.menu.Menu',
-          },
-          {
             name: 'ComboBox',
             calledAs: 'new Ext.form.ComboBox',
             path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'FormPanel',
-            calledAs: 'new Ext.FormPanel',
-            path: 'Ext.FormPanel',
-          },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
           },
           {
             name: 'FormPanel',
@@ -1726,7 +1435,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/FormStructureSurveyEditor.js',
-      name: 'FormStructureSurveyEditor.js',
+      name: 'FormStructureSurveyEditor',
+      fileName: 'FormStructureSurveyEditor.js',
       size: '29 KB',
       childComponents: {
         importedExtComponents: [
@@ -1739,16 +1449,6 @@ const exampleOutput: CJS = {
             name: 'SurveyDialog',
             calledAs: 'new ux.dialog.SurveyDialog',
             path: 'ux.dialog.SurveyDialog',
-          },
-          {
-            name: 'SurveyDialog',
-            calledAs: 'new ux.dialog.SurveyDialog',
-            path: 'ux.dialog.SurveyDialog',
-          },
-          {
-            name: 'SurveyStepDialog',
-            calledAs: 'new ux.dialog.SurveyStepDialog',
-            path: 'ux.dialog.SurveyStepDialog',
           },
           {
             name: 'SurveyStepDialog',
@@ -1774,16 +1474,6 @@ const exampleOutput: CJS = {
             path: 'Ext.grid.ColumnModel',
           },
           {
-            name: 'Toolbar',
-            calledAs: 'new Ext.Toolbar',
-            path: 'Ext.Toolbar',
-          },
-          {
-            name: 'GridPanel',
-            calledAs: 'new Ext.grid.GridPanel',
-            path: 'Ext.grid.GridPanel',
-          },
-          {
             name: 'Store',
             calledAs: 'new Ext.data.Store',
             path: 'Ext.data.Store',
@@ -1797,16 +1487,6 @@ const exampleOutput: CJS = {
             name: 'JsonReader',
             calledAs: 'new Ext.data.JsonReader',
             path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ColumnModel',
-            calledAs: 'new Ext.grid.ColumnModel',
-            path: 'Ext.grid.ColumnModel',
-          },
-          {
-            name: 'Menu',
-            calledAs: 'new Ext.menu.Menu',
-            path: 'Ext.menu.Menu',
           },
           {
             name: 'Menu',
@@ -1829,11 +1509,6 @@ const exampleOutput: CJS = {
             path: 'Ext.form.TextField',
           },
           {
-            name: 'TextField',
-            calledAs: 'new Ext.form.TextField',
-            path: 'Ext.form.TextField',
-          },
-          {
             name: 'FormPanel',
             calledAs: 'new Ext.FormPanel',
             path: 'Ext.FormPanel',
@@ -1848,7 +1523,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/FormStructureSurveyPackageEditor.js',
-      name: 'FormStructureSurveyPackageEditor.js',
+      name: 'FormStructureSurveyPackageEditor',
+      fileName: 'FormStructureSurveyPackageEditor.js',
       size: '19 KB',
       childComponents: {
         importedExtComponents: [
@@ -1861,11 +1537,6 @@ const exampleOutput: CJS = {
             name: 'PrintPhaseOptionsDialog',
             calledAs: 'new ux.PrintPhaseOptionsDialog',
             path: 'ux.PrintPhaseOptionsDialog',
-          },
-          {
-            name: 'SurveyPackageDialog',
-            calledAs: 'new ux.dialog.SurveyPackageDialog',
-            path: 'ux.dialog.SurveyPackageDialog',
           },
           {
             name: 'SurveyPackageDialog',
@@ -1891,11 +1562,6 @@ const exampleOutput: CJS = {
             path: 'Ext.Toolbar',
           },
           {
-            name: 'Toolbar',
-            calledAs: 'new Ext.Toolbar',
-            path: 'Ext.Toolbar',
-          },
-          {
             name: 'GridPanel',
             calledAs: 'new Ext.grid.GridPanel',
             path: 'Ext.grid.GridPanel',
@@ -1904,16 +1570,6 @@ const exampleOutput: CJS = {
             name: 'ColumnModel',
             calledAs: 'new Ext.grid.ColumnModel',
             path: 'Ext.grid.ColumnModel',
-          },
-          {
-            name: 'Toolbar',
-            calledAs: 'new Ext.Toolbar',
-            path: 'Ext.Toolbar',
-          },
-          {
-            name: 'GridPanel',
-            calledAs: 'new Ext.grid.GridPanel',
-            path: 'Ext.grid.GridPanel',
           },
           {
             name: 'Store',
@@ -1931,11 +1587,6 @@ const exampleOutput: CJS = {
             path: 'Ext.data.JsonReader',
           },
           {
-            name: 'ColumnModel',
-            calledAs: 'new Ext.grid.ColumnModel',
-            path: 'Ext.grid.ColumnModel',
-          },
-          {
             name: 'Menu',
             calledAs: 'new Ext.menu.Menu',
             path: 'Ext.menu.Menu',
@@ -1945,7 +1596,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/FormStructureTabs.js',
-      name: 'FormStructureTabs.js',
+      name: 'FormStructureTabs',
+      fileName: 'FormStructureTabs.js',
       size: '2.6 KB',
       childComponents: {
         importedExtComponents: [],
@@ -1955,7 +1607,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF.js',
-      name: 'ManageCRF.js',
+      name: 'ManageCRF',
+      fileName: 'ManageCRF.js',
       size: '15 KB',
       childComponents: {
         importedExtComponents: [
@@ -2002,7 +1655,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_AuditTrail.js',
-      name: 'ManageCRF_AuditTrail.js',
+      name: 'ManageCRF_AuditTrail',
+      fileName: 'ManageCRF_AuditTrail.js',
       size: '1002 bytes',
       childComponents: {
         importedExtComponents: [
@@ -2018,7 +1672,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_CcrTemplate.js',
-      name: 'ManageCRF_CcrTemplate.js',
+      name: 'ManageCRF_CcrTemplate',
+      fileName: 'ManageCRF_CcrTemplate.js',
       size: '3.6 KB',
       childComponents: {
         importedExtComponents: [],
@@ -2034,7 +1689,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_CcrTemplate_Edit.js',
-      name: 'ManageCRF_CcrTemplate_Edit.js',
+      name: 'ManageCRF_CcrTemplate_Edit',
+      fileName: 'ManageCRF_CcrTemplate_Edit.js',
       size: '14 KB',
       childComponents: {
         importedExtComponents: [
@@ -2052,17 +1708,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.form.FormPanel',
             path: 'Ext.form.FormPanel',
           },
-          {
-            name: 'FormPanel',
-            calledAs: 'new Ext.form.FormPanel',
-            path: 'Ext.form.FormPanel',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_CcrTemplates.js',
-      name: 'ManageCRF_CcrTemplates.js',
+      name: 'ManageCRF_CcrTemplates',
+      fileName: 'ManageCRF_CcrTemplates.js',
       size: '2.7 KB',
       childComponents: {
         importedExtComponents: [
@@ -2089,7 +1741,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Form.js',
-      name: 'ManageCRF_Form.js',
+      name: 'ManageCRF_Form',
+      fileName: 'ManageCRF_Form.js',
       size: '62 KB',
       childComponents: {
         importedExtComponents: [
@@ -2132,86 +1785,6 @@ const exampleOutput: CJS = {
             path: 'Ext.XTemplate',
           },
           {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
             name: 'FormPanel',
             calledAs: 'new Ext.FormPanel',
             path: 'Ext.FormPanel',
@@ -2221,87 +1794,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.Window',
             path: 'Ext.Window',
           },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Form_Structure.js',
-      name: 'ManageCRF_Form_Structure.js',
+      name: 'ManageCRF_Form_Structure',
+      fileName: 'ManageCRF_Form_Structure.js',
       size: '7.6 KB',
       childComponents: {
         importedExtComponents: [],
@@ -2317,7 +1816,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Records.js',
-      name: 'ManageCRF_Records.js',
+      name: 'ManageCRF_Records',
+      fileName: 'ManageCRF_Records.js',
       size: '3.8 KB',
       childComponents: {
         importedExtComponents: [],
@@ -2327,7 +1827,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Reports.js',
-      name: 'ManageCRF_Reports.js',
+      name: 'ManageCRF_Reports',
+      fileName: 'ManageCRF_Reports.js',
       size: '1.1 KB',
       childComponents: {
         importedExtComponents: [
@@ -2343,7 +1844,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Settings.js',
-      name: 'ManageCRF_Settings.js',
+      name: 'ManageCRF_Settings',
+      fileName: 'ManageCRF_Settings.js',
       size: '131 KB',
       childComponents: {
         importedExtComponents: [
@@ -2351,16 +1853,6 @@ const exampleOutput: CJS = {
             name: 'RecordTypeStore',
             calledAs: 'new ux.store.RecordTypeStore',
             path: 'ux.store.RecordTypeStore',
-          },
-          {
-            name: 'SettingsBanner',
-            calledAs: 'new ux.banner.SettingsBanner',
-            path: 'ux.banner.SettingsBanner',
-          },
-          {
-            name: 'SettingsBanner',
-            calledAs: 'new ux.banner.SettingsBanner',
-            path: 'ux.banner.SettingsBanner',
           },
           {
             name: 'SettingsBanner',
@@ -2384,19 +1876,9 @@ const exampleOutput: CJS = {
             path: 'ux.dialogs.SignatureStatementDialog',
           },
           {
-            name: 'SettingsBanner',
-            calledAs: 'new ux.banner.SettingsBanner',
-            path: 'ux.banner.SettingsBanner',
-          },
-          {
             name: 'RecordsOverviewCustomColumnsDialog',
             calledAs: 'new ux.dialogs.RecordsOverviewCustomColumnsDialog',
             path: 'ux.dialogs.RecordsOverviewCustomColumnsDialog',
-          },
-          {
-            name: 'show',
-            calledAs: 'new ux.dialogs.IPWhitelistDialog().show',
-            path: 'ux.dialogs.IPWhitelistDialog().show',
           },
           {
             name: 'ManageInstitutesDialog',
@@ -2416,46 +1898,6 @@ const exampleOutput: CJS = {
         ],
         importedReactComponents: [],
         defaultExtComponents: [
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
           {
             name: 'SimpleStore',
             calledAs: 'new Ext.data.SimpleStore',
@@ -2487,84 +1929,9 @@ const exampleOutput: CJS = {
             path: 'Ext.data.JsonReader',
           },
           {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
             name: 'Window',
             calledAs: 'new Ext.Window',
             path: 'Ext.Window',
-          },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
-            name: 'FormPanel',
-            calledAs: 'new Ext.FormPanel',
-            path: 'Ext.FormPanel',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
           },
           {
             name: 'Container',
@@ -2576,7 +1943,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Settings_Admin.js',
-      name: 'ManageCRF_Settings_Admin.js',
+      name: 'ManageCRF_Settings_Admin',
+      fileName: 'ManageCRF_Settings_Admin.js',
       size: '1.6 KB',
       childComponents: {
         importedExtComponents: [],
@@ -2586,7 +1954,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Settings_AutomationLog.js',
-      name: 'ManageCRF_Settings_AutomationLog.js',
+      name: 'ManageCRF_Settings_AutomationLog',
+      fileName: 'ManageCRF_Settings_AutomationLog.js',
       size: '18 KB',
       childComponents: {
         importedExtComponents: [
@@ -2620,11 +1989,6 @@ const exampleOutput: CJS = {
             path: 'Ext.grid.RowSelectionModel',
           },
           {
-            name: 'RowSelectionModel',
-            calledAs: 'new Ext.grid.RowSelectionModel',
-            path: 'Ext.grid.RowSelectionModel',
-          },
-          {
             name: 'ComboBox',
             calledAs: 'new Ext.form.ComboBox',
             path: 'Ext.form.ComboBox',
@@ -2643,31 +2007,6 @@ const exampleOutput: CJS = {
             name: 'JsonReader',
             calledAs: 'new Ext.data.JsonReader',
             path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
           },
           {
             name: 'ArrayStore',
@@ -2685,29 +2024,9 @@ const exampleOutput: CJS = {
             path: 'Ext.grid.ColumnModel',
           },
           {
-            name: 'ArrayStore',
-            calledAs: 'new Ext.data.ArrayStore',
-            path: 'Ext.data.ArrayStore',
-          },
-          {
-            name: 'GridPanel',
-            calledAs: 'new Ext.grid.GridPanel',
-            path: 'Ext.grid.GridPanel',
-          },
-          {
             name: 'GridView',
             calledAs: 'new Ext.grid.GridView',
             path: 'Ext.grid.GridView',
-          },
-          {
-            name: 'Template',
-            calledAs: 'new Ext.Template',
-            path: 'Ext.Template',
-          },
-          {
-            name: 'Template',
-            calledAs: 'new Ext.Template',
-            path: 'Ext.Template',
           },
           {
             name: 'Template',
@@ -2719,7 +2038,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Settings_Automations.js',
-      name: 'ManageCRF_Settings_Automations.js',
+      name: 'ManageCRF_Settings_Automations',
+      fileName: 'ManageCRF_Settings_Automations.js',
       size: '10 KB',
       childComponents: {
         importedExtComponents: [
@@ -2751,7 +2071,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Settings_Metadata.js',
-      name: 'ManageCRF_Settings_Metadata.js',
+      name: 'ManageCRF_Settings_Metadata',
+      fileName: 'ManageCRF_Settings_Metadata.js',
       size: '8.1 KB',
       childComponents: {
         importedExtComponents: [
@@ -2778,17 +2099,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.PagingToolbar',
             path: 'Ext.PagingToolbar',
           },
-          {
-            name: 'ColumnModel',
-            calledAs: 'new Ext.grid.ColumnModel',
-            path: 'Ext.grid.ColumnModel',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Settings_Notifications.js',
-      name: 'ManageCRF_Settings_Notifications.js',
+      name: 'ManageCRF_Settings_Notifications',
+      fileName: 'ManageCRF_Settings_Notifications.js',
       size: '9.0 KB',
       childComponents: {
         importedExtComponents: [
@@ -2835,7 +2152,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Settings_Randomization.js',
-      name: 'ManageCRF_Settings_Randomization.js',
+      name: 'ManageCRF_Settings_Randomization',
+      fileName: 'ManageCRF_Settings_Randomization.js',
       size: '75 KB',
       childComponents: {
         importedExtComponents: [
@@ -2848,26 +2166,6 @@ const exampleOutput: CJS = {
             name: 'StepStore',
             calledAs: 'new ux.store.StepStore',
             path: 'ux.store.StepStore',
-          },
-          {
-            name: 'PhaseStore',
-            calledAs: 'new ux.store.PhaseStore',
-            path: 'ux.store.PhaseStore',
-          },
-          {
-            name: 'StepStore',
-            calledAs: 'new ux.store.StepStore',
-            path: 'ux.store.StepStore',
-          },
-          {
-            name: 'StepStore',
-            calledAs: 'new ux.store.StepStore',
-            path: 'ux.store.StepStore',
-          },
-          {
-            name: 'PhaseStore',
-            calledAs: 'new ux.store.PhaseStore',
-            path: 'ux.store.PhaseStore',
           },
         ],
         importedReactComponents: [],
@@ -2883,89 +2181,9 @@ const exampleOutput: CJS = {
             path: 'Ext.data.SimpleStore',
           },
           {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
             name: 'FormPanel',
             calledAs: 'new Ext.FormPanel',
             path: 'Ext.FormPanel',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
           },
           {
             name: 'Store',
@@ -2988,19 +2206,9 @@ const exampleOutput: CJS = {
             path: 'Ext.ux.form.SpinnerField',
           },
           {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
             name: 'Button',
             calledAs: 'new Ext.Button',
             path: 'Ext.Button',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
           },
           {
             name: 'ArrayStore',
@@ -3018,21 +2226,11 @@ const exampleOutput: CJS = {
             path: 'Ext.form.TextField',
           },
           {
-            name: 'ArrayStore',
-            calledAs: 'new Ext.data.ArrayStore',
-            path: 'Ext.data.ArrayStore',
-          },
-          {
             name: 'GridPanel',
             calledAs: 'new Ext.grid.GridPanel',
             path: 'Ext.grid.GridPanel',
           },
           {
-            name: 'FormPanel',
-            calledAs: 'new Ext.FormPanel',
-            path: 'Ext.FormPanel',
-          },
-          {
             name: 'Window',
             calledAs: 'new Ext.Window',
             path: 'Ext.Window',
@@ -3041,48 +2239,14 @@ const exampleOutput: CJS = {
             name: 'ComboBox',
             calledAs: 'new Ext.form.ComboBox',
             path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'FormPanel',
-            calledAs: 'new Ext.FormPanel',
-            path: 'Ext.FormPanel',
-          },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
           },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Statistics.js',
-      name: 'ManageCRF_Statistics.js',
+      name: 'ManageCRF_Statistics',
+      fileName: 'ManageCRF_Statistics.js',
       size: '15 KB',
       childComponents: {
         importedExtComponents: [],
@@ -3114,24 +2278,9 @@ const exampleOutput: CJS = {
             path: 'Ext.Button',
           },
           {
-            name: 'Button',
-            calledAs: 'new Ext.Button',
-            path: 'Ext.Button',
-          },
-          {
             name: 'ArrayStore',
             calledAs: 'new Ext.data.ArrayStore',
             path: 'Ext.data.ArrayStore',
-          },
-          {
-            name: 'ArrayStore',
-            calledAs: 'new Ext.data.ArrayStore',
-            path: 'Ext.data.ArrayStore',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
           },
           {
             name: 'ComboBox',
@@ -3144,18 +2293,13 @@ const exampleOutput: CJS = {
             path: 'Ext.XTemplate',
           },
           { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          {
-            name: 'Toolbar',
-            calledAs: 'new Ext.Toolbar',
-            path: 'Ext.Toolbar',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Surveys.js',
-      name: 'ManageCRF_Surveys.js',
+      name: 'ManageCRF_Surveys',
+      fileName: 'ManageCRF_Surveys.js',
       size: '3.4 KB',
       childComponents: {
         importedExtComponents: [
@@ -3177,15 +2321,11 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ManageCRF/ManageCRF_Users.js',
-      name: 'ManageCRF_Users.js',
+      name: 'ManageCRF_Users',
+      fileName: 'ManageCRF_Users.js',
       size: '26 KB',
       childComponents: {
         importedExtComponents: [
-          {
-            name: 'UserRightsDialog',
-            calledAs: 'new ux.dialog.UserRightsDialog',
-            path: 'ux.dialog.UserRightsDialog',
-          },
           {
             name: 'UserRightsDialog',
             calledAs: 'new ux.dialog.UserRightsDialog',
@@ -3230,21 +2370,6 @@ const exampleOutput: CJS = {
             path: 'Ext.grid.ColumnModel',
           },
           {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
             name: 'ComboBox',
             calledAs: 'new Ext.form.ComboBox',
             path: 'Ext.form.ComboBox',
@@ -3269,7 +2394,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/AuditTrailEntryGrid.js',
-      name: 'AuditTrailEntryGrid.js',
+      name: 'AuditTrailEntryGrid',
+      fileName: 'AuditTrailEntryGrid.js',
       size: '18 KB',
       childComponents: {
         importedExtComponents: [
@@ -3312,31 +2438,11 @@ const exampleOutput: CJS = {
             path: 'Ext.data.JsonReader',
           },
           {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
             name: 'RowExpander',
             calledAs: 'new Ext.ux.grid.RowExpander',
             path: 'Ext.ux.grid.RowExpander',
           },
           { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
           {
             name: 'ComboBox',
             calledAs: 'new Ext.form.ComboBox',
@@ -3353,24 +2459,9 @@ const exampleOutput: CJS = {
             path: 'Ext.grid.RowSelectionModel',
           },
           {
-            name: 'ColumnModel',
-            calledAs: 'new Ext.grid.ColumnModel',
-            path: 'Ext.grid.ColumnModel',
-          },
-          {
             name: 'GridView',
             calledAs: 'new Ext.grid.GridView',
             path: 'Ext.grid.GridView',
-          },
-          {
-            name: 'Template',
-            calledAs: 'new Ext.Template',
-            path: 'Ext.Template',
-          },
-          {
-            name: 'Template',
-            calledAs: 'new Ext.Template',
-            path: 'Ext.Template',
           },
           {
             name: 'Template',
@@ -3382,7 +2473,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/CcrReportsPdfArchiveGridPanel.js',
-      name: 'CcrReportsPdfArchiveGridPanel.js',
+      name: 'CcrReportsPdfArchiveGridPanel',
+      fileName: 'CcrReportsPdfArchiveGridPanel.js',
       size: '6.5 KB',
       childComponents: {
         importedExtComponents: [
@@ -3409,7 +2501,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/CcrTemplatesGridPanel.js',
-      name: 'CcrTemplatesGridPanel.js',
+      name: 'CcrTemplatesGridPanel',
+      fileName: 'CcrTemplatesGridPanel.js',
       size: '5.5 KB',
       childComponents: {
         importedExtComponents: [
@@ -3431,7 +2524,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/CcrTemplatesReportEmptyFieldsGridPanel.js',
-      name: 'CcrTemplatesReportEmptyFieldsGridPanel.js',
+      name: 'CcrTemplatesReportEmptyFieldsGridPanel',
+      fileName: 'CcrTemplatesReportEmptyFieldsGridPanel.js',
       size: '3.8 KB',
       childComponents: {
         importedExtComponents: [
@@ -3453,7 +2547,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/MonitoringQueriesGridPanel.js',
-      name: 'MonitoringQueriesGridPanel.js',
+      name: 'MonitoringQueriesGridPanel',
+      fileName: 'MonitoringQueriesGridPanel.js',
       size: '22 KB',
       childComponents: {
         importedExtComponents: [
@@ -3516,7 +2611,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/MonitoringValidationsGridPanel.js',
-      name: 'MonitoringValidationsGridPanel.js',
+      name: 'MonitoringValidationsGridPanel',
+      fileName: 'MonitoringValidationsGridPanel.js',
       size: '14 KB',
       childComponents: {
         importedExtComponents: [
@@ -3553,7 +2649,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/MonitoringVerificationsGridPanel.js',
-      name: 'MonitoringVerificationsGridPanel.js',
+      name: 'MonitoringVerificationsGridPanel',
+      fileName: 'MonitoringVerificationsGridPanel.js',
       size: '13 KB',
       childComponents: {
         importedExtComponents: [
@@ -3606,7 +2703,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/PhasesStepsNavigator.js',
-      name: 'PhasesStepsNavigator.js',
+      name: 'PhasesStepsNavigator',
+      fileName: 'PhasesStepsNavigator.js',
       size: '77 KB',
       childComponents: {
         importedExtComponents: [
@@ -3645,61 +2743,17 @@ const exampleOutput: CJS = {
             path: 'Ext.Toolbar',
           },
           {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
-            name: 'Toolbar',
-            calledAs: 'new Ext.Toolbar',
-            path: 'Ext.Toolbar',
-          },
-          {
-            name: 'FormPanel',
-            calledAs: 'new Ext.form.FormPanel',
-            path: 'Ext.form.FormPanel',
-          },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
             name: 'Menu',
             calledAs: 'new Ext.menu.Menu',
             path: 'Ext.menu.Menu',
-          },
-          {
-            name: 'Menu',
-            calledAs: 'new Ext.menu.Menu',
-            path: 'Ext.menu.Menu',
-          },
-          {
-            name: 'Menu',
-            calledAs: 'new Ext.menu.Menu',
-            path: 'Ext.menu.Menu',
-          },
-          {
-            name: 'Menu',
-            calledAs: 'new Ext.menu.Menu',
-            path: 'Ext.menu.Menu',
-          },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
           },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/ReportInstanceGridPanel.js',
-      name: 'ReportInstanceGridPanel.js',
+      name: 'ReportInstanceGridPanel',
+      fileName: 'ReportInstanceGridPanel.js',
       size: '46 KB',
       childComponents: {
         importedExtComponents: [
@@ -3747,36 +2801,6 @@ const exampleOutput: CJS = {
             path: 'Ext.form.ComboBox',
           },
           {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
             name: 'ArrayStore',
             calledAs: 'new Ext.data.ArrayStore',
             path: 'Ext.data.ArrayStore',
@@ -3801,17 +2825,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.Window',
             path: 'Ext.Window',
           },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/ReportStepsNavigator.js',
-      name: 'ReportStepsNavigator.js',
+      name: 'ReportStepsNavigator',
+      fileName: 'ReportStepsNavigator.js',
       size: '48 KB',
       childComponents: {
         importedExtComponents: [
@@ -3840,11 +2860,6 @@ const exampleOutput: CJS = {
             path: 'Ext.Window',
           },
           {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
             name: 'Toolbar',
             calledAs: 'new Ext.Toolbar',
             path: 'Ext.Toolbar',
@@ -3853,21 +2868,6 @@ const exampleOutput: CJS = {
             name: 'FormPanel',
             calledAs: 'new Ext.form.FormPanel',
             path: 'Ext.form.FormPanel',
-          },
-          {
-            name: 'FormPanel',
-            calledAs: 'new Ext.form.FormPanel',
-            path: 'Ext.form.FormPanel',
-          },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
-            name: 'Menu',
-            calledAs: 'new Ext.menu.Menu',
-            path: 'Ext.menu.Menu',
           },
           {
             name: 'Menu',
@@ -3879,7 +2879,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/SurveyGridPanel.js',
-      name: 'SurveyGridPanel.js',
+      name: 'SurveyGridPanel',
+      fileName: 'SurveyGridPanel.js',
       size: '82 KB',
       childComponents: {
         importedExtComponents: [
@@ -3953,41 +2954,6 @@ const exampleOutput: CJS = {
             path: 'Ext.data.JsonReader',
           },
           {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ArrayStore',
-            calledAs: 'new Ext.data.ArrayStore',
-            path: 'Ext.data.ArrayStore',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
             name: 'SimpleStore',
             calledAs: 'new Ext.data.SimpleStore',
             path: 'Ext.data.SimpleStore',
@@ -3996,21 +2962,6 @@ const exampleOutput: CJS = {
             name: 'ArrayStore',
             calledAs: 'new Ext.data.ArrayStore',
             path: 'Ext.data.ArrayStore',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
           },
           {
             name: 'PagingToolbar',
@@ -4037,27 +2988,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.Window',
             path: 'Ext.Window',
           },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/AddCcrTemplateDialog.js',
-      name: 'AddCcrTemplateDialog.js',
+      name: 'AddCcrTemplateDialog',
+      fileName: 'AddCcrTemplateDialog.js',
       size: '3.8 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4073,7 +3010,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/AddInstituteDialog.js',
-      name: 'AddInstituteDialog.js',
+      name: 'AddInstituteDialog',
+      fileName: 'AddInstituteDialog.js',
       size: '9.7 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4109,17 +3047,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.data.JsonReader',
             path: 'Ext.data.JsonReader',
           },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/AddNewReportDialog.js',
-      name: 'AddNewReportDialog.js',
+      name: 'AddNewReportDialog',
+      fileName: 'AddNewReportDialog.js',
       size: '10 KB',
       childComponents: {
         importedExtComponents: [
@@ -4142,11 +3076,6 @@ const exampleOutput: CJS = {
             path: 'Ext.form.ComboBox',
           },
           {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
             name: 'ArrayStore',
             calledAs: 'new Ext.data.ArrayStore',
             path: 'Ext.data.ArrayStore',
@@ -4156,7 +3085,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/AddNotificationConfigurationDialog.js',
-      name: 'AddNotificationConfigurationDialog.js',
+      name: 'AddNotificationConfigurationDialog',
+      fileName: 'AddNotificationConfigurationDialog.js',
       size: '38 KB',
       childComponents: {
         importedExtComponents: [
@@ -4203,27 +3133,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.data.JsonReader',
             path: 'Ext.data.JsonReader',
           },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/AddReportInstanceDialog.js',
-      name: 'AddReportInstanceDialog.js',
+      name: 'AddReportInstanceDialog',
+      fileName: 'AddReportInstanceDialog.js',
       size: '13 KB',
       childComponents: {
         importedExtComponents: [
@@ -4270,7 +3186,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/AddRoleDialog.js',
-      name: 'AddRoleDialog.js',
+      name: 'AddRoleDialog',
+      fileName: 'AddRoleDialog.js',
       size: '3.8 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4286,7 +3203,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/AssignCcrTemplateVariableDialog.js',
-      name: 'AssignCcrTemplateVariableDialog.js',
+      name: 'AssignCcrTemplateVariableDialog',
+      fileName: 'AssignCcrTemplateVariableDialog.js',
       size: '9.8 KB',
       childComponents: {
         importedExtComponents: [
@@ -4325,22 +3243,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.XTemplate',
             path: 'Ext.XTemplate',
           },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'XTemplate',
-            calledAs: 'new Ext.XTemplate',
-            path: 'Ext.XTemplate',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/AuditTrailDialog.js',
-      name: 'AuditTrailDialog.js',
+      name: 'AuditTrailDialog',
+      fileName: 'AuditTrailDialog.js',
       size: '3.3 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4371,7 +3280,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/CommentsDialog.js',
-      name: 'CommentsDialog.js',
+      name: 'CommentsDialog',
+      fileName: 'CommentsDialog.js',
       size: '5.9 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4393,7 +3303,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/CopySurveyPackageDialog.js',
-      name: 'CopySurveyPackageDialog.js',
+      name: 'CopySurveyPackageDialog',
+      fileName: 'CopySurveyPackageDialog.js',
       size: '2.8 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4409,7 +3320,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/CreateHelpdeskTicketDialog.js',
-      name: 'CreateHelpdeskTicketDialog.js',
+      name: 'CreateHelpdeskTicketDialog',
+      fileName: 'CreateHelpdeskTicketDialog.js',
       size: '7.6 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4440,15 +3352,11 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/EditCustomRecordIdPatternDialog.js',
-      name: 'EditCustomRecordIdPatternDialog.js',
+      name: 'EditCustomRecordIdPatternDialog',
+      fileName: 'EditCustomRecordIdPatternDialog.js',
       size: '15 KB',
       childComponents: {
         importedExtComponents: [
-          {
-            name: 'RecordIdElementStore',
-            calledAs: 'new ux.store.RecordIdElementStore',
-            path: 'ux.store.RecordIdElementStore',
-          },
           {
             name: 'RecordIdElementStore',
             calledAs: 'new ux.store.RecordIdElementStore',
@@ -4468,11 +3376,6 @@ const exampleOutput: CJS = {
             path: 'Ext.grid.ColumnModel',
           },
           {
-            name: 'ColumnModel',
-            calledAs: 'new Ext.grid.ColumnModel',
-            path: 'Ext.grid.ColumnModel',
-          },
-          {
             name: 'FormPanel',
             calledAs: 'new Ext.FormPanel',
             path: 'Ext.FormPanel',
@@ -4482,7 +3385,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/EditInstituteDialog.js',
-      name: 'EditInstituteDialog.js',
+      name: 'EditInstituteDialog',
+      fileName: 'EditInstituteDialog.js',
       size: '10 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4518,17 +3422,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.data.JsonReader',
             path: 'Ext.data.JsonReader',
           },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/EditMetadataType.js',
-      name: 'EditMetadataType.js',
+      name: 'EditMetadataType',
+      fileName: 'EditMetadataType.js',
       size: '3.1 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4544,22 +3444,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.form.TextField',
             path: 'Ext.form.TextField',
           },
-          {
-            name: 'TextField',
-            calledAs: 'new Ext.form.TextField',
-            path: 'Ext.form.TextField',
-          },
-          {
-            name: 'TextField',
-            calledAs: 'new Ext.form.TextField',
-            path: 'Ext.form.TextField',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/EditNotificationConfigurationDialog.js',
-      name: 'EditNotificationConfigurationDialog.js',
+      name: 'EditNotificationConfigurationDialog',
+      fileName: 'EditNotificationConfigurationDialog.js',
       size: '2.7 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4569,7 +3460,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/EditReportInstanceDialog.js',
-      name: 'EditReportInstanceDialog.js',
+      name: 'EditReportInstanceDialog',
+      fileName: 'EditReportInstanceDialog.js',
       size: '7.1 KB',
       childComponents: {
         importedExtComponents: [
@@ -4596,7 +3488,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/ExportStructureDialog.js',
-      name: 'ExportStructureDialog.js',
+      name: 'ExportStructureDialog',
+      fileName: 'ExportStructureDialog.js',
       size: '22 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4613,16 +3506,6 @@ const exampleOutput: CJS = {
             path: 'Ext.tree.TreePanel',
           },
           {
-            name: 'FormPanel',
-            calledAs: 'new Ext.form.FormPanel',
-            path: 'Ext.form.FormPanel',
-          },
-          {
-            name: 'SimpleStore',
-            calledAs: 'new Ext.data.SimpleStore',
-            path: 'Ext.data.SimpleStore',
-          },
-          {
             name: 'SimpleStore',
             calledAs: 'new Ext.data.SimpleStore',
             path: 'Ext.data.SimpleStore',
@@ -4637,62 +3520,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.tree.TreeNode',
             path: 'Ext.tree.TreeNode',
           },
-          {
-            name: 'TreeNode',
-            calledAs: 'new Ext.tree.TreeNode',
-            path: 'Ext.tree.TreeNode',
-          },
-          {
-            name: 'TreeNode',
-            calledAs: 'new Ext.tree.TreeNode',
-            path: 'Ext.tree.TreeNode',
-          },
-          {
-            name: 'TreeNode',
-            calledAs: 'new Ext.tree.TreeNode',
-            path: 'Ext.tree.TreeNode',
-          },
-          {
-            name: 'TreeNode',
-            calledAs: 'new Ext.tree.TreeNode',
-            path: 'Ext.tree.TreeNode',
-          },
-          {
-            name: 'TreeNode',
-            calledAs: 'new Ext.tree.TreeNode',
-            path: 'Ext.tree.TreeNode',
-          },
-          {
-            name: 'TreeNode',
-            calledAs: 'new Ext.tree.TreeNode',
-            path: 'Ext.tree.TreeNode',
-          },
-          {
-            name: 'TreeNode',
-            calledAs: 'new Ext.tree.TreeNode',
-            path: 'Ext.tree.TreeNode',
-          },
-          {
-            name: 'TreeNode',
-            calledAs: 'new Ext.tree.TreeNode',
-            path: 'Ext.tree.TreeNode',
-          },
-          {
-            name: 'TreeNode',
-            calledAs: 'new Ext.tree.TreeNode',
-            path: 'Ext.tree.TreeNode',
-          },
-          {
-            name: 'TreeNode',
-            calledAs: 'new Ext.tree.TreeNode',
-            path: 'Ext.tree.TreeNode',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/GoogleAuthenticatorConfig.js',
-      name: 'GoogleAuthenticatorConfig.js',
+      name: 'GoogleAuthenticatorConfig',
+      fileName: 'GoogleAuthenticatorConfig.js',
       size: '7.6 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4719,11 +3553,6 @@ const exampleOutput: CJS = {
             path: 'Ext.BoxComponent',
           },
           {
-            name: 'DisplayField',
-            calledAs: 'new Ext.form.DisplayField',
-            path: 'Ext.form.DisplayField',
-          },
-          {
             name: 'TextField',
             calledAs: 'new Ext.form.TextField',
             path: 'Ext.form.TextField',
@@ -4733,17 +3562,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.form.Hidden',
             path: 'Ext.form.Hidden',
           },
-          {
-            name: 'DisplayField',
-            calledAs: 'new Ext.form.DisplayField',
-            path: 'Ext.form.DisplayField',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/GridFieldConfigDialog.js',
-      name: 'GridFieldConfigDialog.js',
+      name: 'GridFieldConfigDialog',
+      fileName: 'GridFieldConfigDialog.js',
       size: '34 KB',
       childComponents: {
         importedExtComponents: [
@@ -4796,7 +3621,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/ImportStructureDialog.js',
-      name: 'ImportStructureDialog.js',
+      name: 'ImportStructureDialog',
+      fileName: 'ImportStructureDialog.js',
       size: '31 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4818,136 +3644,6 @@ const exampleOutput: CJS = {
             path: 'Ext.data.Store',
           },
           {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
             name: 'ComboBox',
             calledAs: 'new Ext.form.ComboBox',
             path: 'Ext.form.ComboBox',
@@ -4962,22 +3658,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.form.DisplayField',
             path: 'Ext.form.DisplayField',
           },
-          {
-            name: 'DisplayField',
-            calledAs: 'new Ext.form.DisplayField',
-            path: 'Ext.form.DisplayField',
-          },
-          {
-            name: 'DisplayField',
-            calledAs: 'new Ext.form.DisplayField',
-            path: 'Ext.form.DisplayField',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/LabCodePresetsWindow.js',
-      name: 'LabCodePresetsWindow.js',
+      name: 'LabCodePresetsWindow',
+      fileName: 'LabCodePresetsWindow.js',
       size: '2.6 KB',
       childComponents: {
         importedExtComponents: [],
@@ -4987,7 +3674,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/ManageInstitutesDialog.js',
-      name: 'ManageInstitutesDialog.js',
+      name: 'ManageInstitutesDialog',
+      fileName: 'ManageInstitutesDialog.js',
       size: '10 KB',
       childComponents: {
         importedExtComponents: [
@@ -5029,7 +3717,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/ManageVerificationTypesDialog.js',
-      name: 'ManageVerificationTypesDialog.js',
+      name: 'ManageVerificationTypesDialog',
+      fileName: 'ManageVerificationTypesDialog.js',
       size: '11 KB',
       childComponents: {
         importedExtComponents: [
@@ -5066,32 +3755,18 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.FormPanel',
             path: 'Ext.FormPanel',
           },
-          {
-            name: 'Window',
-            calledAs: 'new Ext.Window',
-            path: 'Ext.Window',
-          },
-          {
-            name: 'FormPanel',
-            calledAs: 'new Ext.FormPanel',
-            path: 'Ext.FormPanel',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/MarkDownDialog.js',
-      name: 'MarkDownDialog.js',
+      name: 'MarkDownDialog',
+      fileName: 'MarkDownDialog.js',
       size: '6.6 KB',
       childComponents: {
         importedExtComponents: [],
         importedReactComponents: [],
         defaultExtComponents: [
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
           { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
           {
             name: 'Toolbar',
@@ -5103,7 +3778,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/OpenSurveyLinkDialog.js',
-      name: 'OpenSurveyLinkDialog.js',
+      name: 'OpenSurveyLinkDialog',
+      fileName: 'OpenSurveyLinkDialog.js',
       size: '3.9 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5139,7 +3815,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/OptionGroupDialog.js',
-      name: 'OptionGroupDialog.js',
+      name: 'OptionGroupDialog',
+      fileName: 'OptionGroupDialog.js',
       size: '20 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5155,17 +3832,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.FormPanel',
             path: 'Ext.FormPanel',
           },
-          {
-            name: 'CompositeField',
-            calledAs: 'new Ext.form.CompositeField',
-            path: 'Ext.form.CompositeField',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/OptionGroupImportDialog.js',
-      name: 'OptionGroupImportDialog.js',
+      name: 'OptionGroupImportDialog',
+      fileName: 'OptionGroupImportDialog.js',
       size: '7.5 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5186,7 +3859,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/PreviewHtmlDialog.js',
-      name: 'PreviewHtmlDialog.js',
+      name: 'PreviewHtmlDialog',
+      fileName: 'PreviewHtmlDialog.js',
       size: '3.2 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5202,7 +3876,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/PrintOptionsDialog.js',
-      name: 'PrintOptionsDialog.js',
+      name: 'PrintOptionsDialog',
+      fileName: 'PrintOptionsDialog.js',
       size: '5.1 KB',
       childComponents: {
         importedExtComponents: [
@@ -5218,7 +3893,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/PrintPhaseOptionsDialog.js',
-      name: 'PrintPhaseOptionsDialog.js',
+      name: 'PrintPhaseOptionsDialog',
+      fileName: 'PrintPhaseOptionsDialog.js',
       size: '4.3 KB',
       childComponents: {
         importedExtComponents: [
@@ -5234,7 +3910,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/ReportStepDialog.js',
-      name: 'ReportStepDialog.js',
+      name: 'ReportStepDialog',
+      fileName: 'ReportStepDialog.js',
       size: '8.2 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5270,7 +3947,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/SendCcrReportViaEmailDialog.js',
-      name: 'SendCcrReportViaEmailDialog.js',
+      name: 'SendCcrReportViaEmailDialog',
+      fileName: 'SendCcrReportViaEmailDialog.js',
       size: '4.6 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5286,7 +3964,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/SendMassSurveyInstanceDialog.js',
-      name: 'SendMassSurveyInstanceDialog.js',
+      name: 'SendMassSurveyInstanceDialog',
+      fileName: 'SendMassSurveyInstanceDialog.js',
       size: '6.9 KB',
       childComponents: {
         importedExtComponents: [
@@ -5318,17 +3997,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.BoxComponent',
             path: 'Ext.BoxComponent',
           },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/SendSurveyInstanceDialog.js',
-      name: 'SendSurveyInstanceDialog.js',
+      name: 'SendSurveyInstanceDialog',
+      fileName: 'SendSurveyInstanceDialog.js',
       size: '9.5 KB',
       childComponents: {
         importedExtComponents: [
@@ -5360,17 +4035,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.BoxComponent',
             path: 'Ext.BoxComponent',
           },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/StepDialog.js',
-      name: 'StepDialog.js',
+      name: 'StepDialog',
+      fileName: 'StepDialog.js',
       size: '7.6 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5406,20 +4077,11 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/SurveyDialog.js',
-      name: 'SurveyDialog.js',
+      name: 'SurveyDialog',
+      fileName: 'SurveyDialog.js',
       size: '11 KB',
       childComponents: {
         importedExtComponents: [
-          {
-            name: 'MarkDownDialog',
-            calledAs: 'new ux.dialogs.MarkDownDialog',
-            path: 'ux.dialogs.MarkDownDialog',
-          },
-          {
-            name: 'PreviewHtmlDialog',
-            calledAs: 'new ux.dialogs.PreviewHtmlDialog',
-            path: 'ux.dialogs.PreviewHtmlDialog',
-          },
           {
             name: 'MarkDownDialog',
             calledAs: 'new ux.dialogs.MarkDownDialog',
@@ -5448,32 +4110,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.BoxComponent',
             path: 'Ext.BoxComponent',
           },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'BoxComponent',
-            calledAs: 'new Ext.BoxComponent',
-            path: 'Ext.BoxComponent',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/SurveyPackageDialog.js',
-      name: 'SurveyPackageDialog.js',
+      name: 'SurveyPackageDialog',
+      fileName: 'SurveyPackageDialog.js',
       size: '48 KB',
       childComponents: {
         importedExtComponents: [
@@ -5497,36 +4140,6 @@ const exampleOutput: CJS = {
             calledAs: 'new ux.dialogs.PreviewHtmlDialog',
             path: 'ux.dialogs.PreviewHtmlDialog',
           },
-          {
-            name: 'MarkDownDialog',
-            calledAs: 'new ux.dialogs.MarkDownDialog',
-            path: 'ux.dialogs.MarkDownDialog',
-          },
-          {
-            name: 'PreviewHtmlDialog',
-            calledAs: 'new ux.dialogs.PreviewHtmlDialog',
-            path: 'ux.dialogs.PreviewHtmlDialog',
-          },
-          {
-            name: 'MarkDownDialog',
-            calledAs: 'new ux.dialogs.MarkDownDialog',
-            path: 'ux.dialogs.MarkDownDialog',
-          },
-          {
-            name: 'PreviewHtmlDialog',
-            calledAs: 'new ux.dialogs.PreviewHtmlDialog',
-            path: 'ux.dialogs.PreviewHtmlDialog',
-          },
-          {
-            name: 'MarkDownDialog',
-            calledAs: 'new ux.dialogs.MarkDownDialog',
-            path: 'ux.dialogs.MarkDownDialog',
-          },
-          {
-            name: 'PreviewHtmlDialog',
-            calledAs: 'new ux.dialogs.PreviewHtmlDialog',
-            path: 'ux.dialogs.PreviewHtmlDialog',
-          },
         ],
         importedReactComponents: [],
         defaultExtComponents: [
@@ -5551,71 +4164,6 @@ const exampleOutput: CJS = {
             path: 'Ext.BoxComponent',
           },
           {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'FieldSet',
-            calledAs: 'new Ext.form.FieldSet',
-            path: 'Ext.form.FieldSet',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'BoxComponent',
-            calledAs: 'new Ext.BoxComponent',
-            path: 'Ext.BoxComponent',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'FieldSet',
-            calledAs: 'new Ext.form.FieldSet',
-            path: 'Ext.form.FieldSet',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'BoxComponent',
-            calledAs: 'new Ext.BoxComponent',
-            path: 'Ext.BoxComponent',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'FieldSet',
-            calledAs: 'new Ext.form.FieldSet',
-            path: 'Ext.form.FieldSet',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
-            name: 'BoxComponent',
-            calledAs: 'new Ext.BoxComponent',
-            path: 'Ext.BoxComponent',
-          },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
-          {
             name: 'ArrayStore',
             calledAs: 'new Ext.data.ArrayStore',
             path: 'Ext.data.ArrayStore',
@@ -5625,7 +4173,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/SurveyScheduleManagement.js',
-      name: 'SurveyScheduleManagement.js',
+      name: 'SurveyScheduleManagement',
+      fileName: 'SurveyScheduleManagement.js',
       size: '11 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5676,7 +4225,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/SurveyStepDialog.js',
-      name: 'SurveyStepDialog.js',
+      name: 'SurveyStepDialog',
+      fileName: 'SurveyStepDialog.js',
       size: '10 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5712,22 +4262,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.data.ArrayStore',
             path: 'Ext.data.ArrayStore',
           },
-          {
-            name: 'ArrayStore',
-            calledAs: 'new Ext.data.ArrayStore',
-            path: 'Ext.data.ArrayStore',
-          },
-          {
-            name: 'ArrayStore',
-            calledAs: 'new Ext.data.ArrayStore',
-            path: 'Ext.data.ArrayStore',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/TermsAndConditionsDialog.js',
-      name: 'TermsAndConditionsDialog.js',
+      name: 'TermsAndConditionsDialog',
+      fileName: 'TermsAndConditionsDialog.js',
       size: '2.9 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5744,7 +4285,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/TermsOfUseNotAgreedDialog.js',
-      name: 'TermsOfUseNotAgreedDialog.js',
+      name: 'TermsOfUseNotAgreedDialog',
+      fileName: 'TermsOfUseNotAgreedDialog.js',
       size: '2.8 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5761,7 +4303,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/TermsOfUseUpdateDialog.js',
-      name: 'TermsOfUseUpdateDialog.js',
+      name: 'TermsOfUseUpdateDialog',
+      fileName: 'TermsOfUseUpdateDialog.js',
       size: '3.5 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5778,7 +4321,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/UserRightsDialog.js',
-      name: 'UserRightsDialog.js',
+      name: 'UserRightsDialog',
+      fileName: 'UserRightsDialog.js',
       size: '43 KB',
       childComponents: {
         importedExtComponents: [
@@ -5794,11 +4338,6 @@ const exampleOutput: CJS = {
             name: 'TabPanel',
             calledAs: 'new Ext.TabPanel',
             path: 'Ext.TabPanel',
-          },
-          {
-            name: 'FormPanel',
-            calledAs: 'new Ext.FormPanel',
-            path: 'Ext.FormPanel',
           },
           {
             name: 'FormPanel',
@@ -5831,11 +4370,6 @@ const exampleOutput: CJS = {
             path: 'Ext.grid.EditorGridPanel',
           },
           {
-            name: 'FormPanel',
-            calledAs: 'new Ext.form.FormPanel',
-            path: 'Ext.form.FormPanel',
-          },
-          {
             name: 'Label',
             calledAs: 'new Ext.form.Label',
             path: 'Ext.form.Label',
@@ -5850,7 +4384,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/ZorgTTPLoginDialog.js',
-      name: 'ZorgTTPLoginDialog.js',
+      name: 'ZorgTTPLoginDialog',
+      fileName: 'ZorgTTPLoginDialog.js',
       size: '3.4 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5866,7 +4401,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/dialogs/assignRoleToFormEntityDialog.js',
-      name: 'assignRoleToFormEntityDialog.js',
+      name: 'assignRoleToFormEntityDialog',
+      fileName: 'assignRoleToFormEntityDialog.js',
       size: '8.8 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5907,7 +4443,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/CalculationField.js',
-      name: 'CalculationField.js',
+      name: 'CalculationField',
+      fileName: 'CalculationField.js',
       size: '11 KB',
       childComponents: {
         importedExtComponents: [],
@@ -5917,7 +4454,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/CastorField.js',
-      name: 'CastorField.js',
+      name: 'CastorField',
+      fileName: 'CastorField.js',
       size: '109 KB',
       childComponents: {
         importedExtComponents: [
@@ -5925,11 +4463,6 @@ const exampleOutput: CJS = {
             name: 'SourceDataVerificationConfirmationDialog',
             calledAs: 'new ux.dialogs.SourceDataVerificationConfirmationDialog',
             path: 'ux.dialogs.SourceDataVerificationConfirmationDialog',
-          },
-          {
-            name: 'ConfirmChangesDialog',
-            calledAs: 'new ux.ConfirmChangesDialog',
-            path: 'ux.ConfirmChangesDialog',
           },
           {
             name: 'ConfirmChangesDialog',
@@ -5946,18 +4479,8 @@ const exampleOutput: CJS = {
             calledAs: 'new ux.dialogs.AuditTrailDialog',
             path: 'ux.dialogs.AuditTrailDialog',
           },
-          {
-            name: 'ConfirmChangesDialog',
-            calledAs: 'new ux.ConfirmChangesDialog',
-            path: 'ux.ConfirmChangesDialog',
-          },
         ],
         importedReactComponents: [
-          {
-            name: 'Modal',
-            calledAs: 'new Castor.components.Modal',
-            path: 'Castor.components.Modal',
-          },
           {
             name: 'Modal',
             calledAs: 'new Castor.components.Modal',
@@ -5996,7 +4519,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/CastorFieldSurvey.js',
-      name: 'CastorFieldSurvey.js',
+      name: 'CastorFieldSurvey',
+      fileName: 'CastorFieldSurvey.js',
       size: '32 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6028,7 +4552,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/CastorSliderField.js',
-      name: 'CastorSliderField.js',
+      name: 'CastorSliderField',
+      fileName: 'CastorSliderField.js',
       size: '5.8 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6044,7 +4569,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/DateField.js',
-      name: 'DateField.js',
+      name: 'DateField',
+      fileName: 'DateField.js',
       size: '350 bytes',
       childComponents: {
         importedExtComponents: [],
@@ -6054,7 +4580,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/GeolocationField.js',
-      name: 'GeolocationField.js',
+      name: 'GeolocationField',
+      fileName: 'GeolocationField.js',
       size: '2.2 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6064,7 +4591,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/GridChildField.js',
-      name: 'GridChildField.js',
+      name: 'GridChildField',
+      fileName: 'GridChildField.js',
       size: '26 KB',
       childComponents: {
         importedExtComponents: [
@@ -6091,7 +4619,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/GridField.js',
-      name: 'GridField.js',
+      name: 'GridField',
+      fileName: 'GridField.js',
       size: '48 KB',
       childComponents: {
         importedExtComponents: [
@@ -6122,11 +4651,6 @@ const exampleOutput: CJS = {
             calledAs: 'new Castor.components.Modal',
             path: 'Castor.components.Modal',
           },
-          {
-            name: 'Modal',
-            calledAs: 'new Castor.components.Modal',
-            path: 'Castor.components.Modal',
-          },
         ],
         defaultExtComponents: [
           { name: 'menu', calledAs: 'new Ext.menu', path: 'Ext.menu' },
@@ -6151,28 +4675,19 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.Container',
             path: 'Ext.Container',
           },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/GridFieldPreview.js',
-      name: 'GridFieldPreview.js',
+      name: 'GridFieldPreview',
+      fileName: 'GridFieldPreview.js',
       size: '10 KB',
       childComponents: {
         importedExtComponents: [],
         importedReactComponents: [],
         defaultExtComponents: [
           { name: 'Panel', calledAs: 'new Ext.Panel', path: 'Ext.Panel' },
-          {
-            name: 'Container',
-            calledAs: 'new Ext.Container',
-            path: 'Ext.Container',
-          },
           {
             name: 'Container',
             calledAs: 'new Ext.Container',
@@ -6188,7 +4703,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/ImageField.js',
-      name: 'ImageField.js',
+      name: 'ImageField',
+      fileName: 'ImageField.js',
       size: '158 bytes',
       childComponents: {
         importedExtComponents: [],
@@ -6198,7 +4714,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/LinkField.js',
-      name: 'LinkField.js',
+      name: 'LinkField',
+      fileName: 'LinkField.js',
       size: '6.9 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6208,7 +4725,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/QRCodeField.js',
-      name: 'QRCodeField.js',
+      name: 'QRCodeField',
+      fileName: 'QRCodeField.js',
       size: '6.1 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6218,7 +4736,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/RandomizationField.js',
-      name: 'RandomizationField.js',
+      name: 'RandomizationField',
+      fileName: 'RandomizationField.js',
       size: '2.0 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6228,7 +4747,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/ReportFieldGrid.js',
-      name: 'ReportFieldGrid.js',
+      name: 'ReportFieldGrid',
+      fileName: 'ReportFieldGrid.js',
       size: '11 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6254,7 +4774,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/fields/SummaryField.js',
-      name: 'SummaryField.js',
+      name: 'SummaryField',
+      fileName: 'SummaryField.js',
       size: '4.3 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6264,7 +4785,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/grid/LabCodePresetsGrid.js',
-      name: 'LabCodePresetsGrid.js',
+      name: 'LabCodePresetsGrid',
+      fileName: 'LabCodePresetsGrid.js',
       size: '4.2 KB',
       childComponents: {
         importedExtComponents: [
@@ -6301,7 +4823,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/grid/Roles.js',
-      name: 'Roles.js',
+      name: 'Roles',
+      fileName: 'Roles.js',
       size: '10 KB',
       childComponents: {
         importedExtComponents: [
@@ -6338,7 +4861,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/groupcombo.js',
-      name: 'groupcombo.js',
+      name: 'groupcombo',
+      fileName: 'groupcombo.js',
       size: '3.0 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6365,7 +4889,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/groupdataview.js',
-      name: 'groupdataview.js',
+      name: 'groupdataview',
+      fileName: 'groupdataview.js',
       size: '4.6 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6381,7 +4906,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/panel/FieldDependencyPanel.js',
-      name: 'FieldDependencyPanel.js',
+      name: 'FieldDependencyPanel',
+      fileName: 'FieldDependencyPanel.js',
       size: '30 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6398,11 +4924,6 @@ const exampleOutput: CJS = {
             path: 'Ext.form.FieldSet',
           },
           {
-            name: 'XTemplate',
-            calledAs: 'new Ext.XTemplate',
-            path: 'Ext.XTemplate',
-          },
-          {
             name: 'Store',
             calledAs: 'new Ext.data.Store',
             path: 'Ext.data.Store',
@@ -6421,66 +4942,6 @@ const exampleOutput: CJS = {
             name: 'ComboBox',
             calledAs: 'new Ext.form.ComboBox',
             path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
           },
           {
             name: 'TextField',
@@ -6492,32 +4953,13 @@ const exampleOutput: CJS = {
             calledAs: 'new Ext.data.SimpleStore',
             path: 'Ext.data.SimpleStore',
           },
-          {
-            name: 'Store',
-            calledAs: 'new Ext.data.Store',
-            path: 'Ext.data.Store',
-          },
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
-          {
-            name: 'JsonReader',
-            calledAs: 'new Ext.data.JsonReader',
-            path: 'Ext.data.JsonReader',
-          },
-          {
-            name: 'ComboBox',
-            calledAs: 'new Ext.form.ComboBox',
-            path: 'Ext.form.ComboBox',
-          },
         ],
       },
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/statistics/LineChart.js',
-      name: 'LineChart.js',
+      name: 'LineChart',
+      fileName: 'LineChart.js',
       size: '2.0 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6527,7 +4969,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/store/AutomationsStore.js',
-      name: 'AutomationsStore.js',
+      name: 'AutomationsStore',
+      fileName: 'AutomationsStore.js',
       size: '1.1 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6548,7 +4991,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/store/EncryptableTypesStore.js',
-      name: 'EncryptableTypesStore.js',
+      name: 'EncryptableTypesStore',
+      fileName: 'EncryptableTypesStore.js',
       size: '1.0 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6558,7 +5002,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/store/EpicLabCodesStore.js',
-      name: 'EpicLabCodesStore.js',
+      name: 'EpicLabCodesStore',
+      fileName: 'EpicLabCodesStore.js',
       size: '1.3 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6579,7 +5024,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/store/NotificationConfigurationsStore.js',
-      name: 'NotificationConfigurationsStore.js',
+      name: 'NotificationConfigurationsStore',
+      fileName: 'NotificationConfigurationsStore.js',
       size: '1.4 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6600,7 +5046,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/store/PhaseStore.js',
-      name: 'PhaseStore.js',
+      name: 'PhaseStore',
+      fileName: 'PhaseStore.js',
       size: '1.5 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6621,17 +5068,13 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/store/ReportInstanceStore.js',
-      name: 'ReportInstanceStore.js',
+      name: 'ReportInstanceStore',
+      fileName: 'ReportInstanceStore.js',
       size: '1.9 KB',
       childComponents: {
         importedExtComponents: [],
         importedReactComponents: [],
         defaultExtComponents: [
-          {
-            name: 'HttpProxy',
-            calledAs: 'new Ext.data.HttpProxy',
-            path: 'Ext.data.HttpProxy',
-          },
           {
             name: 'HttpProxy',
             calledAs: 'new Ext.data.HttpProxy',
@@ -6647,7 +5090,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/js/ux/survey/SurveyStepNavigator.js',
-      name: 'SurveyStepNavigator.js',
+      name: 'SurveyStepNavigator',
+      fileName: 'SurveyStepNavigator.js',
       size: '13 KB',
       childComponents: {
         importedExtComponents: [],
@@ -6668,7 +5112,8 @@ const exampleOutput: CJS = {
     },
     {
       path: 'server/sys/castor/_mycrf/mycrf.js',
-      name: 'mycrf.js',
+      name: 'mycrf',
+      fileName: 'mycrf.js',
       size: '27 KB',
       childComponents: {
         importedExtComponents: [

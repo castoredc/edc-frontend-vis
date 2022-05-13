@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { ResponsiveNetwork } from '@nivo/network';
 import styled from 'styled-components';
-import dataMock from '../data/dataMock.json';
 import exampleOutput from '../data/exampleOutput';
 import dataToGraph from '../data/dataToGraph';
 
@@ -24,7 +23,7 @@ const Graph = () => {
   return (
     <Vessel>
       <ResponsiveNetwork
-        data={dataMock}
+        data={nodesAndLinks}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
         linkDistance={function (e) {
           return e.distance;
@@ -50,6 +49,7 @@ const Graph = () => {
         }}
         linkBlendMode="multiply"
         motionConfig="wobbly"
+        animate={false}
       />
     </Vessel>
   );

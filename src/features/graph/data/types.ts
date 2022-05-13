@@ -13,6 +13,7 @@ interface ComponentDesc {
   name: string;
   path: string;
   size: string;
+  fileName: string;
 }
 export interface CJS {
   config: ComponentDesc[];
