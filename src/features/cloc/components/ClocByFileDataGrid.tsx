@@ -44,7 +44,7 @@ const ClocByFileDataGrid: React.FC<Props> = (props) => {
             accessor: 'id',
             isRowHeader: true,
             maxWidth: 1200,
-            width: 800,
+            width: 700,
           },
           {
             Header: 'Language',

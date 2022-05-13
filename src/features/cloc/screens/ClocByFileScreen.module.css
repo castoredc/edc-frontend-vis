@@ -11,7 +11,7 @@
 
 .Filter div[class^='InputBox'] {
   /* Override needed because large width on TextInput is ignored */
-  width: 820px;
+  width: 720px;
 }
 
 .Counts {
