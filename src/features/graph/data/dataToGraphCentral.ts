@@ -18,7 +18,7 @@ export const initialGraphData = (data: CJS): DataToGraphReturn => {
   const linksForMainNodes = mainNodes.map((node) => ({
     source: 'PARENT',
     target: node.id,
-    distance: 100,
+    distance: 130,
   }));
 
   return {
@@ -58,7 +58,7 @@ export const getSecondaryNodesAndLinks = (
         const links = allChild.map((importedName: any) => ({
           source: mainNodeName,
           target: `${mainNodeName}-${importedName.name}`,
-          distance: 100,
+          distance: 130,
         }));
 
         return { nodes, links };
