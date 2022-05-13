@@ -2,16 +2,19 @@ import { useEffect } from 'react';
 import { ResponsiveNetwork } from '@nivo/network';
 import styled from 'styled-components';
 import exampleOutput from '../data/exampleOutput';
-import dataToGraph from '../data/dataToGraph';
+import dataToGraphConstellation from '../data/dataToGraphConstellation';
 
 const Vessel = styled.main`
-  height: 100vh;
+  height: calc(100vh - 2rem);
+  width: calc(100vw - 33rem);
+  background-color: #f5faff;
+  overflow: scroll;
 `;
 
 // Working graph with mock data for now
 //
 const Graph = () => {
-  const nodesAndLinks = dataToGraph(exampleOutput);
+  const nodesAndLinks = dataToGraphConstellation(exampleOutput);
 
   useEffect(() => {
     console.group('Graph page');

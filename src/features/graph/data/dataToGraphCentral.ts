@@ -13,7 +13,7 @@ const dataToGraph = (data: CJS): DataToGraphReturn => {
     color: 'rgb(97, 205, 187)',
   }));
 
-  const secondaryNodes: NetNode[] = bigArray.reduce<Node[]>((acc, curr) => {
+  const secondaryNodes: NetNode[] = bigArray.reduce<NetNode[]>((acc, curr) => {
     const {
       importedExtComponents,
       importedReactComponents,

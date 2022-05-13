@@ -44,8 +44,11 @@ const MatterNavigation = () => {
             Results of cloc by file
           </NavItem>
         </NavItemGroup>
-        <NavItem icon={<NodeIcon />} {...getNavItemProps('graph')}>
-          Graph
+        <NavItem icon={<NodeIcon />} {...getNavItemProps('graphConstellation')}>
+          Graph Constellation
+        </NavItem>
+        <NavItem icon={<NodeIcon />} {...getNavItemProps('graphCentral')}>
+          Graph Central
         </NavItem>
       </Navigation>
     </div>

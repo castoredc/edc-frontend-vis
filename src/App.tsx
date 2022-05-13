@@ -7,7 +7,8 @@ import NavigationBar from './layout/NavigationBar';
 
 import ClocScreen from './features/cloc/screens/ClocScreen';
 import ClocByFileScreen from './features/cloc/screens/ClocByFileScreen';
-import GraphScreen from './features/graph/screens/Graph';
+import GraphConstellation from './features/graph/screens/GraphConstellation';
+import GraphCentral from './features/graph/screens/GraphCentral';
 
 function App() {
   return (
@@ -27,7 +28,11 @@ function App() {
             <Routes>
               <Route path="cloc" element={<ClocScreen />} />
               <Route path="cloc-by-file" element={<ClocByFileScreen />} />
-              <Route path="graph" element={<GraphScreen />} />
+              <Route
+                path="graphConstellation"
+                element={<GraphConstellation />}
+              />
+              <Route path="graphCentral" element={<GraphCentral />} />
               <Route path="*" element={<Navigate to="/cloc" replace />} />
             </Routes>
           </main>
