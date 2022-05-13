@@ -12,7 +12,6 @@ import {
   CheckboxesIcon,
   FileListIcon,
   FormIcon,
-  ListIcon,
   NodeIcon,
   QuillIcon,
 } from '@castoredc/matter-icons';

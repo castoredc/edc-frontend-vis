@@ -5,6 +5,18 @@ import ClocByFileRecord from '../types/ClocByFileRecord';
 
 type Props = {
   records: ClocByFileRecord[];
+  commitId: string;
+};
+
+const getFileUrl = (path: string, commitId?: string) => {
+  // Example:
+  // https://github.com/castoredc/edc/blob/master/src/js/hooks/useId.ts
+  // https://github.com/castoredc/edc/blob/6fb6e43fe96502e31fe04f1e182b475566b2d6d6/src/js/hooks/useId.ts
+
+  const staticPart =
+    'https://github.com/castoredc/edc/blob/' + (commitId ?? 'master');
+  const filePart = path.replace(/^edc/, '');
+  return staticPart + filePart;
 };
 
 const ClocByFileDataGrid: React.FC<Props> = (props) => {
@@ -18,26 +30,33 @@ const ClocByFileDataGrid: React.FC<Props> = (props) => {
       blank: <DataGrid.CellText>{record.blank}</DataGrid.CellText>,
       comment: <DataGrid.CellText>{record.comment}</DataGrid.CellText>,
       code: <DataGrid.CellText>{record.code}</DataGrid.CellText>,
-      menu: (
-        <DataGrid.ActionsCell
-          items={[
-            {
-              destination: () => console.log('Lorem clicked...'),
-              label: 'Lorem Ipsum',
-            },
-          ]}
+      linkCommit: (
+        <DataGrid.IconCell
+          button={{
+            onClick: () =>
+              window.open(getFileUrl(record.path, props.commitId), '_blank'),
+          }}
+          icon={{ description: 'Open in GitHub', type: 'link' }}
+        />
+      ),
+      linkMaster: (
+        <DataGrid.IconCell
+          button={{
+            onClick: () => window.open(getFileUrl(record.path), '_blank'),
+          }}
+          icon={{ description: 'Open in GitHub', type: 'link' }}
         />
       ),
     }));
 
     setRows(rows);
-  }, [props.records]);
+  }, [props.records, props.commitId]);
 
   return (
     <div style={{ backgroundColor: 'white' }}>
       <DataGrid
-        accessibleName="cloc results"
-        anchorRightColumns={1}
+        accessibleName="cloc by file results"
+        anchorRightColumns={2}
         columns={[
           {
             Header: 'Path',
@@ -54,23 +73,30 @@ const ClocByFileDataGrid: React.FC<Props> = (props) => {
           {
             Header: 'Blank',
             accessor: 'blank',
-            width: 150,
+            width: 120,
           },
           {
             Header: 'Comment',
             accessor: 'comment',
-            width: 150,
+            width: 120,
           },
           {
             Header: 'Code',
             accessor: 'code',
-            width: 150,
+            width: 120,
           },
-          DataGrid.ActionsCell.column,
+          {
+            Header: 'Commit',
+            accessor: 'linkCommit',
+            width: 70,
+          },
+          {
+            Header: 'Master',
+            accessor: 'linkMaster',
+            width: 70,
+          },
         ]}
         onClick={(rowId) => console.log(rowId)}
-        onColumnResizeEnd={(columnWidth) => console.log(columnWidth)}
-        onRowSelection={(rowId, selected) => console.log({ rowId, selected })}
         rows={rows}
       />
     </div>

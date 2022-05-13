@@ -25,6 +25,7 @@ const allRecords = Object.entries(edcClocByFileData)
   }));
 
 const LIMIT = 100;
+const COMMIT_ID = '6fb6e43fe96502e31fe04f1e182b475566b2d6d6';
 
 const ClocByFileScreen = () => {
   const [records, setRecords] = useState(allRecords.slice(0, LIMIT));
@@ -75,7 +76,7 @@ const ClocByFileScreen = () => {
             <em style={{ fontWeight: 'bold' }}>cloc --by-file --json</em>{' '}
             command on a directory with fresh clone of{' '}
             <a href="https://github.com/castoredc/edc">EDC</a> repository at
-            commit 6fb6e43fe96502e31fe04f1e182b475566b2d6d6.
+            commit {COMMIT_ID}.
             <ul style={{ margin: 0, padding: '10px 0 0 0', listStyle: 'none' }}>
               <li>Date: 2022-05-12 16:15</li>
               <li>System: Ubuntu 20.04</li>
@@ -121,7 +122,7 @@ const ClocByFileScreen = () => {
           <span>Total: {allRecords.length}</span>
         </div>
       </div>
-      <ClocByFileDataGrid records={records} />
+      <ClocByFileDataGrid records={records} commitId={COMMIT_ID} />
     </div>
   );
 };
