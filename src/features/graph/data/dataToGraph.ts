@@ -28,9 +28,9 @@ const dataToGraph = (data: CJS): DataToGraphReturn => {
   }, []);
 
   const safeLinks: NetLink[] = links.reduce<NetLink[]>((acc, curr) => {
-    const linkIncludedInNodeList = nodes.some(
-      (node) => node.id === curr.source || node.id === curr.target
-    );
+    const linkIncludedInNodeList =
+      nodes.some((node) => node.id === curr.source) &&
+      nodes.some((node) => node.id === curr.target);
     return linkIncludedInNodeList ? [...acc, curr] : acc;
   }, []);
 
