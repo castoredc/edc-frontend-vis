@@ -1,33 +1,64 @@
-import { useEffect } from 'react';
-import { ResponsiveNetwork } from '@nivo/network';
+import { useState } from 'react';
+import { ComputedNode, ResponsiveNetwork } from '@nivo/network';
 import styled from 'styled-components';
 import exampleOutput from '../data/exampleOutput';
-import dataToGraphCentral from '../data/dataToGraphCentral';
+import {
+  getSecondaryNodesAndLinks,
+  initialGraphData,
+  removePreviousNodesAndLinks,
+} from '../data/dataToGraphCentral';
+import { NetNode } from '../data/types';
 
 const Vessel = styled.main`
   height: calc(100vh - 2rem);
 `;
 
 const Graph = () => {
-  const nodesAndLinks = dataToGraphCentral(exampleOutput);
+  const [graphData, setGraphData] = useState(initialGraphData(exampleOutput));
 
-  useEffect(() => {
-    console.group('Graph page');
-    console.log('nodesAndLinks');
-    console.dir(nodesAndLinks);
-    console.groupEnd();
-  }, [nodesAndLinks]);
+  const [previousSelectedNode, setPreviousSelectedNode] = useState('');
+
+  const handleNodeClick = (nodeConfig: ComputedNode<NetNode>) => {
+    if (nodeConfig.color === 'rgb(97, 205, 187)') {
+      let newNodesAndLinks = getSecondaryNodesAndLinks(
+        nodeConfig.id,
+        exampleOutput
+      );
+
+      setGraphData((previousData) => {
+        if (previousSelectedNode) {
+          const updatedNodes = removePreviousNodesAndLinks(
+            previousSelectedNode,
+            exampleOutput,
+            previousData
+          );
+
+          return {
+            nodes: [...updatedNodes.nodes, ...newNodesAndLinks.nodes],
+            links: [...updatedNodes.links, ...newNodesAndLinks.links],
+          };
+        } else {
+          return {
+            nodes: [...previousData.nodes, ...newNodesAndLinks.nodes],
+            links: [...previousData.links, ...newNodesAndLinks.links],
+          };
+        }
+      });
+
+      setPreviousSelectedNode(nodeConfig.id);
+    }
+  };
 
   return (
     <Vessel>
       <ResponsiveNetwork
-        data={nodesAndLinks}
+        data={graphData}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
         linkDistance={function (e) {
           return e.distance;
         }}
-        centeringStrength={0.3}
-        repulsivity={6}
+        centeringStrength={0.2}
+        repulsivity={20}
         nodeSize={function (n) {
           return n.size;
         }}
@@ -48,6 +79,7 @@ const Graph = () => {
         linkBlendMode="multiply"
         motionConfig="wobbly"
         animate={false}
+        onClick={handleNodeClick}
       />
     </Vessel>
   );

@@ -1,80 +1,90 @@
 import { CJS, DataToGraphReturn, NetNode, NetLink } from './types';
 
-// This function takes ./exampleOutput.json as input
-// Returns nodes and links to pass to Network graph
-//
-const dataToGraph = (data: CJS): DataToGraphReturn => {
+export const initialGraphData = (data: CJS): DataToGraphReturn => {
   const bigArray = data.config;
 
   const mainNodes: NetNode[] = bigArray.map((components) => ({
     id: components.name,
-    height: 1,
-    size: 30,
+    height: 0,
+    size: 15,
     color: 'rgb(97, 205, 187)',
   }));
-
-  const secondaryNodes: NetNode[] = bigArray.reduce<NetNode[]>((acc, curr) => {
-    const {
-      importedExtComponents,
-      importedReactComponents,
-      defaultExtComponents,
-    } = curr.childComponents;
-
-    const allChild = [
-      ...importedExtComponents,
-      ...importedReactComponents,
-      ...defaultExtComponents,
-    ];
-
-    const nodes = allChild.map((child) => ({
-      id: `${curr.name}-${child.name}`,
-      height: 1,
-      color: 'rgb(232, 193, 160)',
-      size: 20,
-    }));
-
-    return [...acc, ...nodes];
-  }, []);
 
   const allNodes: NetNode[] = [
     { id: 'PARENT', height: 1, size: 30, color: 'rgb(97, 205, 187)' },
     ...mainNodes,
-    ...secondaryNodes,
   ];
 
-  const links: NetLink[] = bigArray.reduce<NetLink[]>((acc, curr) => {
-    const {
-      importedExtComponents,
-      importedReactComponents,
-      defaultExtComponents,
-    } = curr.childComponents;
-
-    const allChild = [
-      ...importedExtComponents,
-      ...importedReactComponents,
-      ...defaultExtComponents,
-    ];
-
-    const links = allChild.map((importedName: any) => ({
-      source: curr.name,
-      target: `${curr.name}-${importedName.name}`,
-      distance: 100, // TODO: figure out how to calculate distance between nodes
-    }));
-
-    return [...acc, ...links];
-  }, []);
-
-  const additionalLinksForMainNodes = mainNodes.map((node) => ({
+  const linksForMainNodes = mainNodes.map((node) => ({
     source: 'PARENT',
     target: node.id,
     distance: 100,
   }));
 
-  const allLinks = [...additionalLinksForMainNodes, ...links];
   return {
     nodes: allNodes,
-    links: allLinks,
+    links: linksForMainNodes,
   };
 };
 
-export default dataToGraph;
+export const getSecondaryNodesAndLinks = (
+  mainNodeName: string,
+  data: CJS
+): DataToGraphReturn => {
+  const bigArray = data.config;
+
+  const nodesAndLinks = bigArray.reduce<{ nodes: NetNode[]; links: NetLink[] }>(
+    (acc, current) => {
+      if (mainNodeName === current.name) {
+        const {
+          importedExtComponents,
+          importedReactComponents,
+          defaultExtComponents,
+        } = current.childComponents;
+
+        const allChild = [
+          ...importedExtComponents,
+          ...importedReactComponents,
+          ...defaultExtComponents,
+        ];
+
+        const nodes = allChild.map((child) => ({
+          id: `${mainNodeName}-${child.name}`,
+          height: 1,
+          color: 'rgb(232, 193, 160)',
+          size: 10,
+        }));
+
+        const links = allChild.map((importedName: any) => ({
+          source: mainNodeName,
+          target: `${mainNodeName}-${importedName.name}`,
+          distance: 100,
+        }));
+
+        return { nodes, links };
+      } else {
+        return { nodes: acc.nodes, links: acc.links };
+      }
+    },
+    { nodes: [], links: [] }
+  );
+
+  return nodesAndLinks;
+};
+
+export const removePreviousNodesAndLinks = (
+  mainNodeName: string,
+  data: CJS,
+  previousData: DataToGraphReturn
+): DataToGraphReturn => {
+  const nodeAndLinksToRemove = getSecondaryNodesAndLinks(mainNodeName, data);
+
+  return {
+    nodes: previousData.nodes.filter(
+      (ar) => !nodeAndLinksToRemove.nodes.find((rm) => rm.id === ar.id)
+    ),
+    links: previousData.links.filter(
+      (ar) => !nodeAndLinksToRemove.links.find((rm) => rm.source === ar.source)
+    ),
+  };
+};
