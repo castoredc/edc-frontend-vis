@@ -8,9 +8,13 @@ const records = Object.entries(edcClocData)
   .map(([key, value]: [string, any]) => ({
     language: key !== 'SUM' ? key : 'TOTAL',
     files: value.nFiles,
+    filesFormatted: value.nFiles.toLocaleString(),
     blank: value.blank,
+    blankFormatted: value.blank.toLocaleString(),
     comment: value.comment,
+    commentFormatted: value.comment.toLocaleString(),
     code: value.code,
+    codeFormatted: value.code.toLocaleString(),
   }));
 
 const ClocScreen = () => {

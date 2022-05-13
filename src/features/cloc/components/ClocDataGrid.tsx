@@ -14,10 +14,10 @@ const ClocDataGrid: React.FC<Props> = (props) => {
     const rows = props.records.map((record) => ({
       __rowId: 'r_' + record.language,
       id: <DataGrid.HeaderCell>{record.language}</DataGrid.HeaderCell>,
-      files: <DataGrid.CellText>{record.files}</DataGrid.CellText>,
-      blank: <DataGrid.CellText>{record.blank}</DataGrid.CellText>,
-      comment: <DataGrid.CellText>{record.comment}</DataGrid.CellText>,
-      code: <DataGrid.CellText>{record.code}</DataGrid.CellText>,
+      files: <DataGrid.CellText>{record.filesFormatted}</DataGrid.CellText>,
+      blank: <DataGrid.CellText>{record.blankFormatted}</DataGrid.CellText>,
+      comment: <DataGrid.CellText>{record.commentFormatted}</DataGrid.CellText>,
+      code: <DataGrid.CellText>{record.codeFormatted}</DataGrid.CellText>,
     }));
 
     setRows(rows);

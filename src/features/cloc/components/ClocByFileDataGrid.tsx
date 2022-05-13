@@ -27,9 +27,9 @@ const ClocByFileDataGrid: React.FC<Props> = (props) => {
       __rowId: 'r_' + record.path,
       id: <DataGrid.HeaderCell>{record.path}</DataGrid.HeaderCell>,
       language: <DataGrid.CellText>{record.language}</DataGrid.CellText>,
-      blank: <DataGrid.CellText>{record.blank}</DataGrid.CellText>,
-      comment: <DataGrid.CellText>{record.comment}</DataGrid.CellText>,
-      code: <DataGrid.CellText>{record.code}</DataGrid.CellText>,
+      blank: <DataGrid.CellText>{record.blankFormatted}</DataGrid.CellText>,
+      comment: <DataGrid.CellText>{record.commentFormatted}</DataGrid.CellText>,
+      code: <DataGrid.CellText>{record.codeFormatted}</DataGrid.CellText>,
       linkCommit: (
         <DataGrid.IconCell
           button={{

@@ -20,8 +20,11 @@ const allRecords = Object.entries(edcClocByFileData)
     path: key !== 'SUM' ? key : 'TOTAL',
     language: value.language,
     blank: value.blank,
+    blankFormatted: value.blank.toLocaleString(),
     comment: value.comment,
+    commentFormatted: value.comment.toLocaleString(),
     code: value.code,
+    codeFormatted: value.code.toLocaleString(),
   }));
 
 const LIMIT = 100;
@@ -116,10 +119,13 @@ const ClocByFileScreen = () => {
         </div>
         <div className={classes.Counts}>
           <span>
-            Matching: {matchingCount !== undefined ? matchingCount : 'N/A'}
+            Matching:{' '}
+            {matchingCount !== undefined
+              ? matchingCount.toLocaleString()
+              : 'N/A'}
           </span>
-          <span>Showing: {records.length}</span>
-          <span>Total: {allRecords.length}</span>
+          <span>Showing: {records.length.toLocaleString()}</span>
+          <span>Total: {allRecords.length.toLocaleString()}</span>
         </div>
       </div>
       <ClocByFileDataGrid records={records} commitId={COMMIT_ID} />
