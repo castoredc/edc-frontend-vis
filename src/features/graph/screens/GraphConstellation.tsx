@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import exampleOutput from '../data/exampleOutput';
 import dataToGraphConstellation from '../data/dataToGraphConstellation';
 
-const TooltipVessel = styled.div`
+export const TooltipVessel = styled.div`
   padding: 0.5em 1em;
   border-radius: 1rem;
   white-space: pre;

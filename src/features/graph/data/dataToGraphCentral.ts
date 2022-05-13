@@ -8,10 +8,18 @@ export const initialGraphData = (data: CJS): DataToGraphReturn => {
     height: 0,
     size: 15,
     color: 'rgb(97, 205, 187)',
+    fileSize: components.size,
+    path: components.path,
+    fileName: components.fileName,
   }));
 
   const allNodes: NetNode[] = [
-    { id: 'PARENT', height: 1, size: 30, color: 'rgb(232, 193, 160)' },
+    {
+      id: 'PARENT',
+      height: 1,
+      size: 30,
+      color: 'rgb(232, 193, 160)',
+    },
     ...mainNodes,
   ];
 
