@@ -1,4 +1,5 @@
 type ClocRecord = {
+  total: boolean;
   language: string;
   files: number;
   filesFormatted: string;
