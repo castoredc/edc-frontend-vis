@@ -42,6 +42,7 @@ const languageOptions = [...new Set(allRecords.map((r) => r.language))]
 const totalLoc = allRecords.reduce((a, c) => (a += c.code), 0);
 
 const ClocByFileScreen = () => {
+  const [banner, setBanner] = useState(true);
   const [records, setRecords] = useState(allRecords.slice(0, LIMIT));
   const [pathFilter, setPathFilter] = useState('');
   const [languageFilter, setLanguageFilter] = useState<
@@ -96,22 +97,27 @@ const ClocByFileScreen = () => {
       <ViewHeader>
         Count Lines of Code (cloc) by File on EDC Repository
       </ViewHeader>
-      <Banner
-        description={
-          <>
-            Data was collected by running{' '}
-            <em style={{ fontWeight: 'bold' }}>cloc --by-file --json</em>{' '}
-            command on a directory with fresh clone of{' '}
-            <a href="https://github.com/castoredc/edc">EDC</a> repository at
-            commit {COMMIT_ID}.
-            <ul style={{ margin: 0, padding: '10px 0 0 0', listStyle: 'none' }}>
-              <li>Date: 2022-05-12 16:15</li>
-              <li>System: Ubuntu 20.04</li>
-              <li>cloc: 1.82</li>
-            </ul>
-          </>
-        }
-      />
+      {banner && (
+        <Banner
+          description={
+            <>
+              Data was collected by running{' '}
+              <em style={{ fontWeight: 'bold' }}>cloc --by-file --json</em>{' '}
+              command on a directory with fresh clone of{' '}
+              <a href="https://github.com/castoredc/edc">EDC</a> repository at
+              commit {COMMIT_ID}.
+              <ul
+                style={{ margin: 0, padding: '10px 0 0 0', listStyle: 'none' }}
+              >
+                <li>Date: 2022-05-12 16:15</li>
+                <li>System: Ubuntu 20.04</li>
+                <li>cloc: 1.82</li>
+              </ul>
+            </>
+          }
+          onClose={() => setBanner(false)}
+        />
+      )}
       <div className={classes.SettingsPanel}>
         <div
           className={classes.Filter}
