@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { ResponsiveNetwork } from '@nivo/network';
 import styled from 'styled-components';
 import dataMock from '../data/dataMock.json';
-import exampleOutput from '../data/exampleOutput.json';
+import exampleOutput from '../data/exampleOutput';
 import dataToGraph from '../data/dataToGraph';
 
 const Vessel = styled.main`
