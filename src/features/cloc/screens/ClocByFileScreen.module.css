@@ -1,3 +1,9 @@
+.Top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .SettingsPanel {
   display: flex;
   justify-content: space-between;
@@ -5,13 +11,30 @@
 
 .Filter {
   display: flex;
+  gap: 50px;
   align-items: center;
-  gap: 20px;
 }
 
-.Filter div[class^='InputBox'] {
+.Options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Path {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Path div[class^='InputBox'] {
   /* Override needed because large width on TextInput is ignored */
-  width: 720px;
+  width: 700px;
+}
+
+.Languages > div {
+  /* Override needed because large DropDown only has predefined sizes */
+  width: 700px;
 }
 
 .Counts {

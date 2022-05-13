@@ -1,4 +1,4 @@
-import { CJS, DataToGraphReturn, Node, Link } from './types';
+import { CJS, DataToGraphReturn, NetNode, NetLink } from './types';
 
 // This function takes ./exampleOutput.json as input
 // Returns nodes and links to pass to Network graph
@@ -6,14 +6,14 @@ import { CJS, DataToGraphReturn, Node, Link } from './types';
 const dataToGraph = (data: CJS): DataToGraphReturn => {
   const bigArray = data.config;
 
-  const mainNodes: Node[] = bigArray.map((components) => ({
+  const mainNodes: NetNode[] = bigArray.map((components) => ({
     id: components.name,
     height: 1,
     size: 30,
     color: 'rgb(97, 205, 187)',
   }));
 
-  const secondaryNodes: Node[] = bigArray.reduce<Node[]>((acc, curr) => {
+  const secondaryNodes: NetNode[] = bigArray.reduce<Node[]>((acc, curr) => {
     const {
       importedExtComponents,
       importedReactComponents,
@@ -36,13 +36,13 @@ const dataToGraph = (data: CJS): DataToGraphReturn => {
     return [...acc, ...nodes];
   }, []);
 
-  const allNodes: Node[] = [
+  const allNodes: NetNode[] = [
     { id: 'PARENT', height: 1, size: 30, color: 'rgb(97, 205, 187)' },
     ...mainNodes,
     ...secondaryNodes,
   ];
 
-  const links: Link[] = bigArray.reduce<Link[]>((acc, curr) => {
+  const links: NetLink[] = bigArray.reduce<NetLink[]>((acc, curr) => {
     const {
       importedExtComponents,
       importedReactComponents,

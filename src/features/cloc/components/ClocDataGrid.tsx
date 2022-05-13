@@ -14,20 +14,10 @@ const ClocDataGrid: React.FC<Props> = (props) => {
     const rows = props.records.map((record) => ({
       __rowId: 'r_' + record.language,
       id: <DataGrid.HeaderCell>{record.language}</DataGrid.HeaderCell>,
-      files: <DataGrid.CellText>{record.files}</DataGrid.CellText>,
-      blank: <DataGrid.CellText>{record.blank}</DataGrid.CellText>,
-      comment: <DataGrid.CellText>{record.comment}</DataGrid.CellText>,
-      code: <DataGrid.CellText>{record.code}</DataGrid.CellText>,
-      menu: (
-        <DataGrid.ActionsCell
-          items={[
-            {
-              destination: () => console.log('Lorem clicked...'),
-              label: 'Lorem Ipsum',
-            },
-          ]}
-        />
-      ),
+      files: <DataGrid.CellText>{record.filesFormatted}</DataGrid.CellText>,
+      blank: <DataGrid.CellText>{record.blankFormatted}</DataGrid.CellText>,
+      comment: <DataGrid.CellText>{record.commentFormatted}</DataGrid.CellText>,
+      code: <DataGrid.CellText>{record.codeFormatted}</DataGrid.CellText>,
     }));
 
     setRows(rows);
@@ -37,7 +27,6 @@ const ClocDataGrid: React.FC<Props> = (props) => {
     <div style={{ backgroundColor: 'white' }}>
       <DataGrid
         accessibleName="cloc results"
-        anchorRightColumns={1}
         columns={[
           {
             Header: 'Language',
@@ -65,11 +54,8 @@ const ClocDataGrid: React.FC<Props> = (props) => {
             accessor: 'code',
             width: 150,
           },
-          DataGrid.ActionsCell.column,
         ]}
         onClick={(rowId) => console.log(rowId)}
-        onColumnResizeEnd={(columnWidth) => console.log(columnWidth)}
-        onRowSelection={(rowId, selected) => console.log({ rowId, selected })}
         rows={rows}
       />
     </div>

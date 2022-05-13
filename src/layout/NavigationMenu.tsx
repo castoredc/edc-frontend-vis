@@ -8,14 +8,7 @@ import {
   useNavigationState,
 } from '@castoredc/matter';
 
-import {
-  CheckboxesIcon,
-  FileListIcon,
-  FormIcon,
-  ListIcon,
-  NodeIcon,
-  QuillIcon,
-} from '@castoredc/matter-icons';
+import { FileListIcon, NodeIcon } from '@castoredc/matter-icons';
 
 const MatterNavigation = () => {
   const navigate = useNavigate();
@@ -53,21 +46,6 @@ const MatterNavigation = () => {
         </NavItemGroup>
         <NavItem icon={<NodeIcon />} {...getNavItemProps('graph')}>
           Graph
-        </NavItem>
-        <NavItem icon={<QuillIcon />} {...getNavItemProps('lorem-ipsum')}>
-          Lorem Ipsum
-        </NavItem>
-        <NavItemGroup
-          icon={<FormIcon />}
-          id="forms"
-          label="Forms"
-          separator
-          {...getNavItemGroupProps('forms')}
-        >
-          <NavItem {...getNavItemProps('formik')}>Formik</NavItem>
-        </NavItemGroup>
-        <NavItem icon={<CheckboxesIcon />} {...getNavItemProps('misc')}>
-          Miscellaneous
         </NavItem>
       </Navigation>
     </div>

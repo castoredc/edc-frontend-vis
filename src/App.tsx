@@ -8,9 +8,6 @@ import NavigationBar from './layout/NavigationBar';
 import ClocScreen from './features/cloc/screens/ClocScreen';
 import ClocByFileScreen from './features/cloc/screens/ClocByFileScreen';
 import GraphScreen from './features/graph/screens/Graph';
-import LoremIpsumScreen from './features/sample/screens/LoremIpsumScreen';
-import FormikScreen from './features/sample/screens/FormikScreen';
-import MiscScreen from './features/sample/screens/MiscScreen';
 
 function App() {
   return (
@@ -31,13 +28,7 @@ function App() {
               <Route path="cloc" element={<ClocScreen />} />
               <Route path="cloc-by-file" element={<ClocByFileScreen />} />
               <Route path="graph" element={<GraphScreen />} />
-              <Route path="lorem-ipsum" element={<LoremIpsumScreen />} />
-              <Route path="formik" element={<FormikScreen />} />
-              <Route path="misc" element={<MiscScreen />} />
-              <Route
-                path="*"
-                element={<Navigate to="/lorem-ipsum" replace />}
-              />
+              <Route path="*" element={<Navigate to="/cloc" replace />} />
             </Routes>
           </main>
         </div>

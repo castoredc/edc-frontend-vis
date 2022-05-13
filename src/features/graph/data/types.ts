@@ -19,13 +19,13 @@ export interface CJS {
   config: ComponentDesc[];
 }
 
-export interface Link {
+export interface NetLink {
   source: string;
   target: string;
   distance: number;
 }
 
-export interface Node {
+export interface NetNode {
   id: string;
   height: number;
   color: string;
@@ -33,6 +33,6 @@ export interface Node {
 }
 
 export interface DataToGraphReturn {
-  nodes: Node[];
-  links: Link[];
+  nodes: NetNode[];
+  links: NetLink[];
 }
