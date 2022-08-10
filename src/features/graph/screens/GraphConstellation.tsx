@@ -37,7 +37,7 @@ const Vessel = styled.main`
 // Working graph with mock data for now
 //
 const Graph = () => {
-  const nodesAndLinks = dataToGraphConstellation(exampleOutput);
+  const nodesAndLinks = dataToGraphConstellation({ config: [] });
 
   useEffect(() => {
     console.group('Graph page');

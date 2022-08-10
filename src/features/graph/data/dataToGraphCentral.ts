@@ -1,39 +1,59 @@
-import { CJS, DataToGraphReturn, NetNode, NetLink } from './types';
+import { CJS, DataToGraphReturn, NetNode, NetLink, Node } from './types';
 
-export const initialGraphData = (data: CJS): DataToGraphReturn => {
-  const bigArray = data.config;
-
-  const mainNodes: NetNode[] = bigArray.map((components) => ({
-    id: components.name,
-    height: 0,
-    size: 15,
-    color: 'rgb(97, 205, 187)',
-    fileSize: components.size,
-    path: components.path,
-    fileName: components.fileName,
-  }));
-
-  const allNodes: NetNode[] = [
-    {
-      id: 'PARENT',
-      height: 1,
-      size: 30,
-      color: 'rgb(232, 193, 160)',
+export const getInitialGraphData = (allNodes: Node[]): DataToGraphReturn =>
+  allNodes.reduce<DataToGraphReturn>(
+    (result, node) => {
+      return {
+        nodes: [
+          ...result.nodes,
+          {
+            id: node.name,
+            height: 0,
+            size: node.childComponents ? 15 : 10,
+            color: node.childComponents ? 'rgb(97, 205, 187)' : 'orange',
+            fileSize: '',
+            path: '',
+            fileName: '',
+          },
+        ],
+        links: [
+          ...result.links,
+          ...(node.childComponents
+            ? [
+                ...node.childComponents,
+                ...node.extendsExtComponents!,
+                ...node.usesExtComponents!,
+              ]
+                .filter(
+                  (x, index, arr) => arr.findIndex((_) => _ === x) === index
+                )
+                .map((childName) => ({
+                  distance: 130,
+                  source: node.name,
+                  target: childName,
+                }))
+            : [
+                {
+                  distance: 130,
+                  source: 'PARENT',
+                  target: node.name,
+                },
+              ]),
+        ],
+      };
     },
-    ...mainNodes,
-  ];
-
-  const linksForMainNodes = mainNodes.map((node) => ({
-    source: 'PARENT',
-    target: node.id,
-    distance: 130,
-  }));
-
-  return {
-    nodes: allNodes,
-    links: linksForMainNodes,
-  };
-};
+    {
+      nodes: [
+        {
+          id: 'PARENT',
+          height: 1,
+          size: 30,
+          color: 'rgb(232, 193, 160)',
+        },
+      ],
+      links: [],
+    }
+  );
 
 export const getSecondaryNodesAndLinks = (
   mainNodeName: string,

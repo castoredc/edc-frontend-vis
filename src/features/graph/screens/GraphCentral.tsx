@@ -1,17 +1,9 @@
 import { useState } from 'react';
-import {
-  ComputedNode,
-  ResponsiveNetwork,
-  NodeTooltipProps,
-} from '@nivo/network';
+import { InputGroup } from '@castoredc/matter';
+import { NetworkCanvas, NodeTooltipProps } from '@nivo/network';
 import styled from 'styled-components';
 import exampleOutput from '../data/exampleOutput';
-import {
-  getSecondaryNodesAndLinks,
-  initialGraphData,
-  removePreviousNodesAndLinks,
-} from '../data/dataToGraphCentral';
-import { NetNode } from '../data/types';
+import { getInitialGraphData } from '../data/dataToGraphCentral';
 import { TooltipVessel } from './GraphConstellation';
 
 const Vessel = styled.main`
@@ -38,58 +30,70 @@ const Tooltip = (data: NodeTooltipProps<any>) => {
 };
 
 const Graph = () => {
-  const [graphData, setGraphData] = useState(initialGraphData(exampleOutput));
-
-  const [previousSelectedNode, setPreviousSelectedNode] = useState('');
-
-  const handleNodeClick = (nodeConfig: ComputedNode<NetNode>) => {
-    if (nodeConfig.color === 'rgb(97, 205, 187)') {
-      let newNodesAndLinks = getSecondaryNodesAndLinks(
-        nodeConfig.id,
-        exampleOutput
-      );
-
-      setGraphData((previousData) => {
-        if (previousSelectedNode) {
-          const updatedNodes = removePreviousNodesAndLinks(
-            previousSelectedNode,
-            exampleOutput,
-            previousData
-          );
-
-          return {
-            nodes: [...updatedNodes.nodes, ...newNodesAndLinks.nodes],
-            links: [...updatedNodes.links, ...newNodesAndLinks.links],
-          };
-        } else {
-          return {
-            nodes: [...previousData.nodes, ...newNodesAndLinks.nodes],
-            links: [...previousData.links, ...newNodesAndLinks.links],
-          };
-        }
-      });
-
-      setPreviousSelectedNode(nodeConfig.id);
-    }
-  };
+  const [search, setSearch] = useState({ mode: 'includes', name: '' });
+  const [centeringStrength, setCenteringStrength] = useState(0.15);
+  const [graphData] = useState(getInitialGraphData(exampleOutput));
 
   return (
     <Vessel>
-      <ResponsiveNetwork
+      <div
+        style={{
+          display: 'flex',
+        }}
+      >
+        <InputGroup
+          labelText="Component name"
+          onChange={(e) =>
+            setSearch({ mode: 'includes', name: e.target.value })
+          }
+          placeholder="DataEntry, Admin, etc.."
+        />
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <label>Centering strength: {centeringStrength}</label>
+          <input
+            type="range"
+            step={0.05}
+            min={0.1}
+            defaultValue={0.15}
+            max={1}
+            onChange={(e) => setCenteringStrength(Number(e.target.value))}
+          />
+        </div>
+      </div>
+      <NetworkCanvas
+        width={1200}
+        height={1200}
         data={graphData}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
-        linkDistance={function (e) {
-          return e.distance;
-        }}
-        centeringStrength={0.2}
-        repulsivity={20}
-        nodeSize={function (n) {
-          return n.size;
-        }}
-        activeNodeSize={function (n) {
-          return 1.5 * n.size;
-        }}
-        nodeColor={function (e) {
+        centeringStrength={centeringStrength}
+        distanceMax={500}
+        repulsivity={100}
+        nodeSize={e => e.size}
+        activeNodeSize={e => e.size}
+        inactiveNodeSize={e => e.size}
+        nodeColor={(e) => {
+          if (e.id === 'PARENT') {
+            return e.color;
+          }
+
+          if (!search.name) {
+            return e.color;
+          }
+
+          if (
+            search.mode === 'includes' &&
+            e.id.toLowerCase().includes(search.name.toLowerCase())
+          ) {
+            return 'red';
+          }
+
+          if (
+            search.mode === 'equals' &&
+            e.id.toLowerCase() === search.name.toLowerCase()
+          ) {
+            return 'red';
+          }
+
           return e.color;
         }}
         nodeBorderWidth={1}
@@ -97,13 +101,15 @@ const Graph = () => {
           from: 'color',
           modifiers: [['darker', 0.8]],
         }}
-        linkThickness={function (n) {
-          return 2 + 2 * n.target.data.height;
-        }}
-        linkBlendMode="multiply"
-        motionConfig="wobbly"
         animate={false}
-        onClick={handleNodeClick}
+        onClick={(e) => {
+          if (e.id !== 'PARENT') {
+            setSearch({
+              mode: 'equals',
+              name: e.id,
+            });
+          }
+        }}
         nodeTooltip={Tooltip}
       />
     </Vessel>

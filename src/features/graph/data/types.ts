@@ -8,8 +8,9 @@ interface ChildComponents {
   importedReactComponents: ChildComponentsDesc[];
   defaultExtComponents: ChildComponentsDesc[];
 }
-interface ComponentDesc {
+export interface ComponentDesc {
   childComponents: ChildComponents;
+  extendsExtComponents: ChildComponentsDesc[];
   name: string;
   path: string;
   size: string;
@@ -17,6 +18,16 @@ interface ComponentDesc {
 }
 export interface CJS {
   config: ComponentDesc[];
+}
+
+export type Node = {
+  name: string;
+  path?: string;
+  fileName?: string;
+  size?: string;
+  extendsExtComponents?: string[];
+  usesExtComponents?: string[];
+  childComponents?: string[];
 }
 
 export interface NetLink {
