@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { InputGroup } from '@castoredc/matter';
-import { NetworkCanvas, NodeTooltipProps } from '@nivo/network';
+import { ResponsiveNetworkCanvas, NodeTooltipProps } from '@nivo/network';
 import styled from 'styled-components';
 import exampleOutput from '../data/exampleOutput';
 import { getInitialGraphData } from '../data/dataToGraphCentral';
@@ -34,6 +34,8 @@ const Graph = () => {
   const [centeringStrength, setCenteringStrength] = useState(0.15);
   const [graphData] = useState(getInitialGraphData(exampleOutput));
 
+    console.log(graphData)
+
   return (
     <Vessel>
       <div
@@ -60,17 +62,16 @@ const Graph = () => {
           />
         </div>
       </div>
-      <NetworkCanvas
-        width={1200}
-        height={1200}
+      <ResponsiveNetworkCanvas
         data={graphData}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
         centeringStrength={centeringStrength}
         distanceMax={500}
         repulsivity={100}
-        nodeSize={e => e.size}
-        activeNodeSize={e => e.size}
-        inactiveNodeSize={e => e.size}
+        // linkColor={(e) => 'red'}
+        nodeSize={(e) => e.size}
+        activeNodeSize={(e) => e.size}
+        inactiveNodeSize={(e) => e.size}
         nodeColor={(e) => {
           if (e.id === 'PARENT') {
             return e.color;

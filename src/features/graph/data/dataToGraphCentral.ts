@@ -20,25 +20,27 @@ export const getInitialGraphData = (allNodes: Node[]): DataToGraphReturn =>
           ...result.links,
           ...(node.childComponents
             ? [
-                ...node.childComponents,
-                ...node.extendsExtComponents!,
-                ...node.usesExtComponents!,
-              ]
-                .filter(
-                  (x, index, arr) => arr.findIndex((_) => _ === x) === index
-                )
-                .map((childName) => ({
-                  distance: 130,
-                  source: node.name,
-                  target: childName,
-                }))
-            : [
+                ...[
+                  ...node.childComponents,
+                  ...node.extendsExtComponents!,
+                  ...node.usesExtComponents!,
+                ]
+                  .filter(
+                    (x, index, arr) => arr.findIndex((_) => _ === x) === index
+                  )
+                  .map((childName) => ({
+                    distance: 130,
+                    source: node.name,
+                    target: childName,
+                  })),
+                // Link of a big component to the root
                 {
-                  distance: 130,
                   source: 'PARENT',
                   target: node.name,
+                  distance: 130,
                 },
-              ]),
+              ]
+            : []),
         ],
       };
     },
