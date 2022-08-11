@@ -10,7 +10,11 @@ export const getInitialGraphData = (allNodes: Node[]): DataToGraphReturn =>
             id: node.name,
             height: 0,
             size: node.childComponents ? 15 : 10,
-            color: node.childComponents ? 'rgb(97, 205, 187)' : 'orange',
+            color: node.childComponents
+              ? 'rgb(97, 205, 187)'
+              : node.name.startsWith('Ext')
+              ? 'palevioletred'
+              : 'orange',
             fileSize: '',
             path: '',
             fileName: '',

@@ -28,10 +28,6 @@ function App() {
             <Routes>
               <Route path="cloc" element={<ClocScreen />} />
               <Route path="cloc-by-file" element={<ClocByFileScreen />} />
-              <Route
-                path="graphConstellation"
-                element={<GraphConstellation />}
-              />
               <Route path="graphCentral" element={<GraphCentral />} />
               <Route path="*" element={<Navigate to="/cloc" replace />} />
             </Routes>

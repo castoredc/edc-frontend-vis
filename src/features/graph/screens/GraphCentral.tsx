@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { InputGroup } from '@castoredc/matter';
+import { FormLabel, InputGroup } from '@castoredc/matter';
 import { ResponsiveNetworkCanvas, NodeTooltipProps } from '@nivo/network';
 import styled from 'styled-components';
 import exampleOutput from '../data/exampleOutput';
@@ -34,24 +34,81 @@ const Graph = () => {
   const [centeringStrength, setCenteringStrength] = useState(0.15);
   const [graphData] = useState(getInitialGraphData(exampleOutput));
 
-    console.log(graphData)
+  console.log(graphData);
 
   return (
     <Vessel>
+      <div style={{ display: 'flex' }}>
+        <div
+          style={{ display: 'flex', alignItems: 'center', marginRight: '1rem' }}
+        >
+          <div
+            style={{
+              marginRight: '0.25rem',
+              width: 15,
+              height: 15,
+              borderRadius: '50%',
+              background: 'rgb(97, 205, 187)',
+            }}
+          />
+          Number of parent components:{' '}
+          {graphData.nodes.filter((x) => x.size === 15).length}
+        </div>
+        <div
+          style={{ display: 'flex', alignItems: 'center', marginRight: '1rem' }}
+        >
+          <div
+            style={{
+              marginRight: '0.25rem',
+              width: 10,
+              height: 10,
+              borderRadius: '50%',
+              background: 'orange',
+            }}
+          />
+          Number of non-parent components:{' '}
+          {
+            graphData.nodes.filter(
+              (x) => x.size === 10 && !x.id.startsWith('Ext')
+            ).length
+          }
+        </div>
+        <div
+          style={{ display: 'flex', alignItems: 'center', marginRight: '1rem' }}
+        >
+          <div
+            style={{
+              marginRight: '0.25rem',
+              width: 10,
+              height: 10,
+              borderRadius: '50%',
+              background: 'palevioletred',
+            }}
+          />
+          Number of Extjs basic components:{' '}
+          {graphData.nodes.filter((x) => x.id.startsWith('Ext')).length}
+        </div>
+      </div>
       <div
         style={{
           display: 'flex',
         }}
       >
-        <InputGroup
-          labelText="Component name"
-          onChange={(e) =>
-            setSearch({ mode: 'includes', name: e.target.value })
-          }
-          placeholder="DataEntry, Admin, etc.."
-        />
+        <div
+          style={{
+            marginRight: '1rem',
+          }}
+        >
+          <InputGroup
+            labelText="Component name"
+            onChange={(e) =>
+              setSearch({ mode: 'includes', name: e.target.value })
+            }
+            placeholder="DataEntry, Admin, etc.."
+          />
+        </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <label>Centering strength: {centeringStrength}</label>
+          <FormLabel>Centering strength: {centeringStrength}</FormLabel>
           <input
             type="range"
             step={0.05}
